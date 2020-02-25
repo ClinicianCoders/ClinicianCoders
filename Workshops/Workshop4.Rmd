@@ -23,16 +23,16 @@ cchic <- cchic %>%
 ## Content
 
 - Using the `dplyr` package.
-- Standard methods for selecting data
-- Recipies to perform common operations
+- Standard methods for selecting data.
+- Recipes to perform common operations.
     - Manipulating strings
     - Manipulating dates
     - Changing data structure
 
 ## What is data wrangling?
 
-- Transforming raw data into a form you can use for analysis
-- Includes
+- The process of transforming raw data into a form you can use for analysis.
+- Steps include:
     - Cleaning data (Workshop 2)
     - Organising it into a structure that allows you to analyse it.
     - Creating derived variables from raw data
