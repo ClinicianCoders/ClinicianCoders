@@ -1,5 +1,5 @@
 ---
-title: "Data Wrangling"
+title: "Data wrangling"
 
 output: 
   powerpoint_presentation:
@@ -24,7 +24,7 @@ cchic <- cchic %>%
 
 - Using the `dplyr` package.
 - Standard methods for selecting data.
-- Recipes to perform common operations.
+- Recipes to perform common operations, such as:
     - Manipulating strings
     - Manipulating dates
     - Changing data structure
@@ -33,18 +33,23 @@ cchic <- cchic %>%
 
 - The process of transforming raw data into a form you can use for analysis.
 - Steps include:
-    - Cleaning data (Workshop 2)
+    - Cleaning the data (Workshop 2) - as tempting as it might be to do this in Excel, for reproducibility, always try to do this in R.
     - Organising it into a structure that allows you to analyse it.
-    - Creating derived variables from raw data
-    - Validating the data
+    - Creating derived variables from raw data.
+    - Validating the data.
 
 ## Another way to think of it... 
 
+:::::::::::::: {.columns}
+::: {.column}
 - Taking raw data
 - Subjecting it to processes along a data pipeline
-- You can then use your processed data for analysis
-
+- Using the processed data for analysis
+:::
+::: {.column}
 ![](../Images/PipelineWrangling.png)
+:::
+::::::::::::::
 
 ## Load dplyr
 
@@ -64,11 +69,13 @@ Load data from the file you created earlier. The data frame should be called `cc
 
 :::::::::::::: {.columns}
 ::: {.column}
-- Takes whatever you did before, and passes it on to the next function
-- Whenever you see it, think of the word 'then' 
-- `data_frame_name %>% 
-  [select certain patients/rows] %>% 
-  [function]`
+- Takes whatever you did before, and passes it on to the next function.
+- Whenever you see it, think of the word 'then'. 
+```{r, eval = F}
+data_frame_name %>% 
+  dplyr::select(column_name) %>% 
+  mean()
+```
 - Shortcut - `Cmd + Shift + M` (Mac) `Ctrl + Shift + M` (Windows)
 :::
 ::: {.column}
@@ -84,8 +91,10 @@ Tell them that there are a couple of things we need to cover about dplyr before 
 - You use them to compare values
     - `==`   (equal to)
     - `!=`   (not equal to)
-    - `>, <`   (greater than, less than)
-    - `>=, <=`   (greater than or equal to, less than or equal to)
+    - `>`   (greater than)
+    - `<`   (less than)
+    - `>=`   (greater than or equal to)
+    - `<=`   (less than or equal to)
     - `is.na()`   (is the value missing)
 
 - More than one condition?
@@ -98,8 +107,21 @@ This is the second thing we need to learn. It applies to most parts of R.
 
 ## Example of using logical operators
 
-- `age >= 18`
-- `age >= 18 & age <= 60`
+Try running:
+```{r}
+test_age <- c(50, 25, 32, 67, 46, 19)
+
+# What elements in the vector are >= 65?
+test_age >= 65
+
+```
+
+It should return a logical vector. This can then be used to filter your vector.
+
+```{r}
+# Extract elements of vector which are >= 65
+test_age[test_age >= 65]
+```
 
 ::: notes
 For instance, when you are selecting something
@@ -111,7 +133,7 @@ Choose rows based on the conditions you specify.
 
 ```{r, eval = FALSE}
 cchic %>%
-  filter(age_years >= 65)
+  dplyr::filter(age_years >= 65)
 ```
 
 The output is a data frame where all patients are 65 years or older.
@@ -126,7 +148,7 @@ Allows you to choose specific variables from your dataset.
 
 ```{r, eval = FALSE}
 cchic %>%
-  select(sex)
+  dplyr::select(sex)
 ```
 
 Output is a data frame with the gender of all patients.
@@ -139,13 +161,14 @@ The second verb is select.
 
 ```{r, eval = FALSE}
 cchic %>%
-  filter(age_years >= 65) %>%
-  select(sex)
+  dplyr::filter(age_years >= 65) %>%
+  dplyr::select(sex)
 ```
 
 Output is the gender of patients who are 65 years or older.
 
 What happens if you do `select()` and then `filter()`? 
+
 You have removed the age variable from the dataset, so you can’t filter based on age.
 
 ## Piped data with functions
@@ -154,8 +177,8 @@ Piped data can be passed on to almost any function in R
 
 ```{r, eval = FALSE}
 cchic %>%
-  filter(age_years >= 65) %>%
-  select(sex) %>%
+  dplyr::filter(age_years >= 65) %>%
+  dplyr::select(sex) %>%
   summary()
 ```
 
@@ -164,8 +187,6 @@ Gives information on gender for patients older than 65.
 
 ## Other dplyr wrangling verbs
 
-- `filter()`
-- `select()`
 - `group_by()`
 - `summarise()`
 
@@ -175,22 +196,20 @@ Gives information on gender for patients older than 65.
 Try this.
 ```{r, eval = FALSE}
 cchic %>%
-  group_by(sex) %>%
-  summarise(mean_urea = mean(urea))
+  dplyr::group_by(sex) %>%
+  dplyr::summarise(mean_urea = mean(urea))
 ```
 
 What is the output?
-Hint – check for missing values in `cchic$urea`
+Hint – check for missing values in `cchic$urea`. You made need to add an additional argument in the function `mean`, which removes missing values. 
 
 ## Make it work
 
 ```{r}
 cchic %>%
-  group_by(sex) %>%
-  summarise(mean_urea = mean(urea,
-    na.rm =
-      TRUE
-  ))
+  dplyr::group_by(sex) %>%
+  dplyr::summarise(mean_urea = mean(urea,
+                                    na.rm = TRUE))
 ```
 
 An alternative is to filter out the missing values of urea.
@@ -204,7 +223,7 @@ Make sure you are happy running
 - `group_by()`
 - `summarise()`
 
-## Favourite data tidying 'recipies'
+## Favourite data tidying 'recipes'
 
 1. Rename a variable
 2. Create a new variable
@@ -225,7 +244,7 @@ The variable called `na` is very confusing
 
 ```{r, eval = FALSE}
 cchic <- cchic %>%
-  rename(sodium = na)
+  dplyr::rename(sodium = na)
 ```
 
 
@@ -235,7 +254,7 @@ Use the `mutate` function
 
 ```{r, eval = FALSE}
 cchic <- cchic %>%
-  mutate(bmi = (weight / (height / 100)^2))
+  dplyr::mutate(bmi = (weight / (height / 100)^2))
 ```
 
 
@@ -252,7 +271,7 @@ You can't do maths on this vector.
 ```{r, eval = T}
 weight <- c("70kg", "80 kg", "82 kg", "74", "39")
 
-weight <- parse_number(weight)
+weight <- readr::parse_number(weight)
 str(weight)
 ```
 
@@ -267,11 +286,12 @@ Notice that `female` is coded in 2 different ways
 
 We can change all of the letters to uppercase.
 ```{r}
-test_gender <- str_to_upper(test_gender)
+test_gender <- stringr::str_to_upper(test_gender)
 test_gender
 ```
 
-Look at the manipulate strings cheat sheet for other functions you can use.
+Look at the manipulate strings cheat sheet (https://resources.rstudio.com/rstudio-developed/strings) for other functions you can use.
+
 
 ## 5. Working with dates
 
@@ -285,7 +305,7 @@ test_dates <- c("02-01-12", "03-04-15", "15-06-02")
 
 Convert these characters to dates. 
 ```{r}
-test_dates <- dmy(test_dates)
+test_dates <- lubridate::dmy(test_dates)
 test_dates
 ```
 
@@ -298,7 +318,7 @@ Extracting years
 
 ```{r, eval = FALSE}
 cchic <- cchic %>% 
-  mutate(year_born = year(ymd(dob)))
+  dplyr::mutate(year_born = year(ymd(dob)))
 
 str(cchic$year_born)
 ```
@@ -307,7 +327,7 @@ Extracting days
 
 ```{r, eval = FALSE}
 cchic <- cchic %>% 
-  mutate(discharge_day = day(ymd_hms(cchic$discharge_dttm)))
+  dplyr::mutate(discharge_day = day(ymd_hms(cchic$discharge_dttm)))
 
 str(cchic$discharge_day)
 ```
@@ -319,12 +339,12 @@ Let's calculate the length of stay of patients admitted to the ICU.
 
 ```{r, eval = FALSE}
 cchic <- cchic %>%
-  mutate(los = difftime(ymd_hms(discharge_dttm),
+  dplyr::mutate(los = difftime(ymd_hms(discharge_dttm),
                         ymd_hms(arrival_dttm), units = "days"))
 ```
 
 
-## 6. Columns to rows.
+## 6. Columns to rows and back again
 
 ![Convert data spread over several variables into a single one](../Images/WideToLong.png)
 
@@ -345,10 +365,9 @@ library(tidyr)
 cchic
 
 cchic_long <- cchic %>%
-  gather(
-    "temp_point", "temperature",
-    temp_c:temp_nc
-  )
+  tidyr::gather(key = "temp_point", 
+                value = "temperature", 
+                temp_c:temp_nc)
 
 names(cchic_long)
 ```
@@ -369,13 +388,28 @@ cchic_long %>%
 Get them to do this. 
 :::
 
+## What if we want to convert it back?
+
+We can use the `tidyr` function, `spread()`.
+
+```{r, eval = F}
+
+cchic_reverted <- cchic_long %>%
+  tidyr::spread(key = "temp_point", 
+                value = "temperature")
+
+names(cchic_reverted)
+```
+
+Notice that the variables "temp_c" and "temp_nc" are seperate again.
+
 ## 7. Deleting columns
 
 What if we wanted to remove the `temp_nc` variable?
 
 ```{r, eval = FALSE}
 cchic %>%
-  select(-temp_nc)
+  dplyr::select(-temp_nc)
 ```
 
 The `-` sign means deselect here. 
@@ -385,7 +419,7 @@ Don’t forget to assign the above code to something, otherwise the output won�
 ## Excercise
 
 1. How many patients weigh more than 70kg?
-    - Hint- look at the `n()` function. 
+    - Hint - look at the `n()` function. 
 
 2. Outcome of patients who were 60 years or older?
     - What is the mean length of stay of patients who are 60 years or older?
@@ -396,8 +430,8 @@ Don’t forget to assign the above code to something, otherwise the output won�
 
 ```{r}
 cchic %>%
-  filter(weight > 70) %>%
-  summarise(number = n())
+  dplyr::filter(weight > 70) %>%
+  dplyr::summarise(number = n())
 ```
 
 ## Outcome of patients who were 60 years or older.
@@ -405,15 +439,15 @@ cchic %>%
 ```{r, eval = FALSE}
 # Mean length of stay
 cchic %>%
-  filter(age_years >= 60) %>%
-  summarise(los = mean(los, na.rm = TRUE))
+  dplyr::filter(age_years >= 60) %>%
+  dplyr::summarise(los = mean(los, na.rm = TRUE))
 ```
 
 ```{r}
 # Number of people alive at discharge.
 cchic %>%
-  filter(age_years >= 60) %>%
-  select(vital_status) %>%
+  dplyr::filter(age_years >= 60) %>%
+  dplyr::select(vital_status) %>%
   table()
 ```
 
