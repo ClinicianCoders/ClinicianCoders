@@ -186,10 +186,12 @@ If you add a `character` to a vector of integers, R will change the whole vector
 ```{r}
 test <- c(1, 2, 3, 4)
 # Note that `test` is a numeric vector.
+str(test)
 class(test)
 # Add a character to `test`
 test <- c(1, 2, 3, 4, "x")
 # Note that `test` is now a character vector.
+str(test)
 class(test)
 ```
 
@@ -200,6 +202,7 @@ test2 <- c(1, 2, 3, 4, TRUE)
 # Note that the last element is `1`.
 test2
 # Note that the vector is numeric.
+str(test2)
 class(test2)
 ```
 
@@ -669,8 +672,8 @@ setwd()
 
 Remember
 
-- You need quotation marks (`""`) around your file path name
-- Start with a root directory and then specify branches 
+- You need quotation marks (`""`) around your file path name.
+- Start with a root directory and then specify branches. 
 - If you have a file in the directory you wish to use, you can find out the file path name by right clicking on the file:
   - `Properties` in Windows
   - `Get Info` in Mac
@@ -687,9 +690,9 @@ However, the correct notation in R for both is `/`
 
 ##### The `readr` package
 
-- `readr` is a package containing functions to help R read your external files  
-- It is automatically installed with `tidyverse`  
-- Install and load the package as follows  
+- `readr` is a package containing functions to help R read your external files.  
+- It is automatically installed with `tidyverse`.  
+- Install and load the package as follows.  
 ```{r, eval=FALSE}
 install.packages("tidyverse")
 library(tidyverse)
@@ -746,29 +749,36 @@ head(cchic)
 ```
 
 - Returns the first 6 rows of the dataset.
-- Lists other column headings at the bottom
+- Lists other column headings at the bottom.
 
 ```{r}
 tail(cchic)
 ```
 
-- Like `head()` but gives you the last 6 rows as a tibble
-- Useful to look for missing data at the end of the dataset
+- Like `head()` but gives you the last 6 rows as a tibble.
+- Useful to look for missing data at the end of the dataset.
 
 \newpage
 ```{r}
 names(cchic)
 ```
 
-- Lists the names of all the variables
-- Useful if you want to check for the spelling of any variables
+- Lists the names of all the variables.
+- Useful if you want to check for the spelling of any variables.
+
+```{r, eval = FALSE}
+class(cchic)
+```
+
+- Prints the class of the object `cchic`. 
+- You can therefore check an object before running a function on it. This would prevent you, for example, from trying to run a mean on a data frame.
 
 ```{r, eval = FALSE}
 str(cchic)
 ```
 
 - Reports the format of each variable in R.
-- You can therefore check vectors before running functions. This would prevent you, for example, from trying to run a mean on a character vector
+- You can therefore check vectors before running functions. This would prevent you, for example, from trying to run a mean on a character vector.
 
 \newpage
 #### Co-ordinates
@@ -812,7 +822,7 @@ To use these you have to install the appropriate packages
 ## Exercises
 
 1. What are the variable formats in `cchic`?
-2. Display the `discharge` vector in `cchic`.
+2. Display the `discharge_dttm` vector in `cchic`.
 3. How many men and women are in the database?
 4. How many survived and how many died?
 5. What does the function `ls()` do?
@@ -827,9 +837,9 @@ To use these you have to install the appropriate packages
 str(cchic)
 ```
 
-2. Display the `discharge` vector from `cchic`
+2. Display the `discharge_dttm` vector from `cchic`
 ```{r, eval = FALSE}
-cchic$discharge
+cchic$discharge_dttm
 ```
 
 3. How many men and women are in the database?

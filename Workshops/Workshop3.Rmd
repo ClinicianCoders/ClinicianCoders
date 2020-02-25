@@ -1,5 +1,5 @@
 ---
-title: "Importing Data into R"
+title: "Importing data into R"
 
 output: 
   powerpoint_presentation:
@@ -19,24 +19,24 @@ cchic <- read_csv("../clean_CCHIC.csv")
 
 ## What will this workshop teach you?
 
-1.  Getting `csv` files into R  
-2.  Initial exploration of your data set  
+1.  Getting `csv` files into R.  
+2.  Initial exploration of your data set.  
 \newparagraph
 
-The handout also includes some tips on using Google Sheets
+The handout also includes some tips on importing data from Google Sheets.
 
 ## Introduction
-- You have now learnt to input data into R manually  
+- You have now learnt to input data into R manually.  
 - But what happens if you are given an Excel spreadsheet and told to analyse it?  
   - How can you look at and work with that data in R?
   
 ## What is a CSV file?
 ::::::::::::{.columns}
 :::{.column}
-- *Comma separated values* file  
-- You still have columns and rows       
-- But data values on a single row are separated by commas instead of walls of a cell  
-- Excel spreadsheets are easily converted into this format
+- *Comma separated values* file:  
+    - You still have columns and rows.       
+    - However, data values on a single row are separated by commas instead of walls of a cell.  
+    - Excel spreadsheets are easily converted into this format.
 :::
 :::{.column}
 ![](../Images/UnformattedCSV.png)
@@ -47,8 +47,8 @@ The handout also includes some tips on using Google Sheets
 ## Time Out
 ::::::::::::{.columns}
 :::{.column}
-- Take a moment to downlaod the practise data set
-- Available in `csv` format   
+- Take a moment to download the practise data set.
+- Available in `csv` format:   
 
   - `clean_CCHIC` from the slack channel  
   
@@ -61,15 +61,15 @@ The handout also includes some tips on using Google Sheets
 :::::::::::: 
 
 ## Files, Directories and File Paths
-- R can not read your data if it does not know where it is stored  
-- Your computer has a system for storing files within directories 
-- Directories are also known as folders  
-- The language used to instruct on the location of the file in known as the `file path` 
+- R can not read your data if it does not know where it is stored.
+- Your computer has a system for storing files within directories.
+- Directories are also known as folders.
+- The language used to instruct on the location of the file in known as the `file path`. 
 
 ## File Paths
 ::::::::::::{.columns}
 :::{.column}
-- Starts with a `Root Directory` and then `Branches` are specified
+- Starts with a `Root Directory` and then `Branches` are specified.
 - You can find out the file path name by right clicking on any file:
   - `Properties` in Windows
   - `Get Info` in Mac  
@@ -86,14 +86,14 @@ The handout also includes some tips on using Google Sheets
 ## Finding and setting your Working Directory
 ::::::::::::{.columns}
 :::{.column}
-- R would have chosen a working directory for you  
+- R will have chosen a working directory for you.  
 
 ```{r, eval=FALSE}
 getwd()
 ```
 
-- Will display your working directory in your console  
-- You can then reset it to your desired working directory using 
+- Will display your working directory in your console.  
+- You can then reset it to your desired working directory using. 
 
 ```{r, eval=FALSE}
 setwd()
@@ -187,10 +187,10 @@ library(tidyverse)
 
 ```{r, eval=FALSE}
 # You are saving your data in an object called "cchic"
-cchic <- read_csv("C:/Users/mayas/Desktop/Work/DataSciFellowship/clean_CCHIC.csv")
+cchic <- read_csv("C:/Users/rhrey/OneDrive - University College London/PhD/Teaching/ClinicianCoders_wd/ClinicianCoders/clean_CCHIC.csv")
 ```
 
-Display the contents of the data frame `cchic`.
+- Display the contents of the data frame `cchic`.
 
 ```{r, eval = FALSE}
 cchic
@@ -202,7 +202,7 @@ Get them to do this
 
 ## Tibble
 
-![A `tibble` is a specially formatted data frame. Your data has been imported in this format.](../Images/Tibble.png)
+![Your data has been imported as a `tibble`, a specially formatted data frame. Notice how it reports the data type of each column under their name, similar to `str()` on a vector.](../Images/Tibble.png)
 
 ## Viewing Your Data in R
 ::::::::::::{.columns}
@@ -215,8 +215,8 @@ View(cchic)
 ```
 
 - The data is displayed in a familiar spreadsheet format. 
-  - This is a more human-legible table  
-  - You can also view the data via the environment pane
+  - This is a more human-legible table.  
+  - You can also view the data via the environment pane.
 :::
 :::{.column}
 ![](../Images/View(cchic).png)
@@ -225,13 +225,13 @@ View(cchic)
 
 ## Shortcuts
 
-- There are notations to shorten the code for the file path  
-- Use single dot for a file within current working directory
+- There are notations to shorten the code for the file path.  
+- Use single dot for a file within current working directory.
 ```{r, eval=FALSE}
-read_csv("./clean_CCHIC.csv")
+read_csv("../clean_CCHIC.csv")
 ```
 
-- Use double dot ".." for a file in the directory above the current working directory
+- Use double dot ".." for a file in the directory above the current working directory.
 
 ## Reviewing your data in R
 
@@ -241,11 +241,12 @@ You can use these functions to investigate your data frame:
 - `head(cchic)`  
 - `tail(cchic)`  
 - `names(cchic)`  
+- `class(cchic)`
 - `str(cchic)`  
       
 ## head()
 
-```{r, eval = FALSE}
+```{r, eval=FALSE}
 head(cchic)
 ```
 
@@ -253,7 +254,7 @@ Prints the first 6 rows of the data frame.
 
 ## tail()
 
-```{r, eval = FALSE}
+```{r, eval=FALSE}
 tail(cchic)
 ```
 
@@ -261,19 +262,26 @@ Prints the last 6 rows of the data frame.
 
 ## names()
 
-```{r, eval = FALSE}
+```{r, eval=FALSE}
 names(cchic)
 ```
 
 Prints the names of the variables. 
 
+## class()
+
+```{r, eval=FALSE}
+class(cchic)
+```
+Prints the class of the object `cchic`.
+
 ## str()
 
-```{r, eval = FALSE}
+```{r, eval = F}
 str(cchic)
 ```
 
-Prints the data type of each variable.
+Prints the data type of each variable in `cchic`.
 
 ## Look at specific items.
 
@@ -287,14 +295,14 @@ This displays the the piece of data in the 21st row and 5th column.
 
 ## Selecting variables using $ sign.
 
-- You can also use the `$` function
+- You can also use the `$` function.
 - Enter `data_frame_name$variable_name`
 
 ```{r, eval=FALSE}
 cchic$weight
 ```
 
-- This will list all of the data in the weight column
+- This will list all of the data in the weight column.
 
 ## Other tools to review data
 
@@ -305,17 +313,22 @@ cchic$weight
   - `describe()` from `Hmisc` package  
 - To use these you have to install the appropriate packages
 
+```{r, echo = F, eval=FALSE}
+DescTools::Desc(cchic)
+Hmisc::describe(cchic)
+```
+
 ::: notes
 Let them explore these if you have time.
 :::
 
 ## Exercise
 1. What types of variables do you have in `cchic`?
-2. Display the `discharge` vector from in `cchic`.
+2. Display the `discharge_dttm` vector from in `cchic`.
 3. How many men and women are in the database?
 4. How many survived and how many died?
 5. a) What does the function `ls()` do? 
-   b) Use it to see how many vectors contain information about "temp"
+   b) Use it to see how many vectors contain information about "temp".
   
 ## Answer 1.
 What types of variables do you have in `cchic`?
@@ -325,9 +338,9 @@ str(cchic)
 ```
 
 ## Answer 2
-Display the `discharge` vector in `cchic`.
+Display the `discharge_dttm` vector in `cchic`.
 ```{r, eval = FALSE}
-cchic$discharge
+cchic$discharge_dttm
 ```
 
 ## Answer 3
@@ -348,6 +361,6 @@ What does the function `ls()` do?
 ls(cchic, pattern = "temp")
 ```
 
-This lists all of the variables containing the word "temp".
+This lists all of the variables in `cchic` containing the word "temp".
 
 # Time for lunch!
