@@ -29,7 +29,7 @@ Say that this is a quick intro to the course. And that this is what we cover dur
 - Access Wi-fi
 - Download R Studio
 - Have a spreadsheet program on your laptop
-- Join the slack channel
+- Join the Slack channel
 - Decide which dataset to use on the second day
 
 ::: notes
@@ -37,68 +37,69 @@ Go through each item on list, make sure each person has completed all items. You
 Tell people that they can sign the CCHIC user sharing agreement if they want to access the full public dataset to play with later.
 :::
 
-## Course schedule
-
-- 2 days of intensive learning
-- Coffee and lunch provided
-
 ## Schedule - Day 1
 
-- 09:00 - 09:30: Start and Welcome
+- 09:00 - 09:30: Start and welcome
 
 - 09:30 - 10:30: Workshop 1: Introduction to R
 
-- 10:30 - 11:00: Coffee Break
+- 10:30 - 11:00: Coffee break
 
-- 11:00 - 11:45: Workshop 2: Cleaning your Dataset
+- 11:00 - 11:45: Workshop 2: Cleaning your dataset
 
-- 11:45 - 13:00: Workshop 3: Getting your Data into R
+- 11:45 - 13:00: Workshop 3: Getting your data into R
 
 - 13:00 - 14:00: Lunch
 
-- 14:00 - 16:30: Workshop 4: Data Wrangling
+- 14:00 - 16:30: Workshop 4: Data wrangling
+
+::: notes
+Lunch is provided 
+:::
  
 ## Schedule - Day 2
 
-- 09:30 - 11:20: Workshop 5: Data Visualisation
+- 09:30 - 11:20: Workshop 5: Data visualisation
 
-- 11:20 - 11:40: Coffee Break
+- 11:20 - 11:40: Coffee break
 
-- 11:40 - 13:30: Workshop 6: Basic Satistics
+- 11:40 - 12:20: Workshop 6: Statistics in R primer
+
+- 12:20 - 13:30: Workshop 7: Control flow and looping
 
 - 13:30 - 14:15: Lunch
 
-- 14:15 - 16:00: Workshop 7: Using your own Data
+- 14:15 - 16:00: Workshop 8: Using your own data
 
-## The Data
+## The data
 
 - We use the Critical Care Health Informatics Collaborative dataset.
 
-- Multicentre Adult ITU database
-    - 11 adult ICUs
+- Multicentre adult intensive therapy unit database
+    - 11 adult intensive care units
     - 5 UK teaching hospitals
     - Privacy ensured through “highest standards of data security”
     - 18, 074 unique patients
+    
 - You will be using a synthetically derived dataset structured in a simillar format to the CCHIC data. 
 - Data looks real, but isn't.
 
-
 ## Workshop layout
 
-- 7 workshops.
-- 5 of these include a presentation and chances for you to follow along on your laptops.
+- 8 workshops.
+- These include presentations and chances for you to follow along on your laptops.
 - You work your way through a worksheet during Workshop 2. 
-- You try to answer a question of your own using data during Workshop 7. 
-
-- A pdf file will be uploaded to the Slack channel after this presentation. It contains all of the content from the course workshops for future reference. 
+- You try to answer a question of your own using data during Workshop 8. 
+- A pdf file is available on the GitHub: https://github.com/datascibc/ClinicianCoders/blob/master/Handout.pdf. It contains all of the content from the course workshops for future reference. 
 
 ## Final note - tips on writing code
 
-- Save your work where prompted by facilitator
+- Save your work frequently!
 - It takes a while to get the hang of writing code. 
-- There may be code glitches (erroneous `()` or `,`) 
-- But that is part of coding.
-- Be mindful as you type them out
-- Tell us if you spot any we’ve made!
+- Be mindful as you type code out. 
+    - Check your punctuation (e.g. placement of `()` or `,`). 
+    - Capitalisation matters (e.g. `Data` vs `data`).
+- Google is your friend.
+- Tell us if you spot any errors we’ve made!
 
-# Thank you. We hope you enjoy the course. 
+# **Thank you. We hope you enjoy the course.**

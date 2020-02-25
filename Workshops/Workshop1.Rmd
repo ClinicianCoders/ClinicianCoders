@@ -1,5 +1,5 @@
 ---
-title: "Introduction to R."
+title: "Introduction to R"
 
 output: 
   powerpoint_presentation:
@@ -14,37 +14,37 @@ output:
 ## Disclaimer
 
 - Much of the following material can be sourced from open access resources
-    - Software Carpentry
+    - [Software Carpentry](https://software-carpentry.org/)
+    - [R Cheatsheets](https://rstudio.com/resources/cheatsheets/)
     - Stack Overflow
-
-- Initially collated by members of the DataSciBC (www.datascibc.org)
+    - [Hadley Wickham's R for Data Science](https://r4ds.had.co.nz/)
+- Initially collated by members of the [DataSciBC](www.datascibc.org)
 
 
 ## Content
 
 - Motivation for R: what and why?
-- R studio: a tour
+- RStudio: a tour
 - R building blocks
-- Using/Writing functions 
+- Using/writing functions 
 
 ## What is R?
 
-- Free software for statistical computing and plotting
-- Works with variety of platforms
+- Open-source software for data analysis and visualisation
+- Compatible with a variety of platforms
     - UNIX
     - MacOS
     - Windows
-- Built around handling data. 'Understands' data.
-    - Particularly well suited to data science / statistics
+- Particularly well suited to data science/statistics
 
 ## Why use R?
 
 - Why not?
-    - Need to learn a new language
-    - Does not use 'point and click'
-    - Need to describe to the computer the steps you want it to take
+    - Need to learn a new language.
+    - Does not use 'point and click'.
+    - Need to describe to the computer the steps you want it to take.
 - Why?
-    - You can do *anything*
+    - Anything you can do in spreadsheets, you can do in R plus **so much more**.
     - Not limited to the pre-designed command process of an app.
     - You record everything you do, so you can do it again.
 
@@ -52,20 +52,20 @@ output:
 
 - Save time
     - Small upfront investment for long term gain
-    - New data? - Easy
-    - Repeat analysis? - Easy
+    - New data + same analysis? - Easy 
     - Found an error? - Easy
 - Reproducible Science
     - Code makes your analysis explicit
     - Writing code = writing lab-book = good reproducible science
 
-## The Reproducible Science Pipeline
+## Typical data science pipeline
 
 ![](../Images/Pipeline.png)
+*https://r4ds.had.co.nz/*
 
 ## Working with RStudio 
 
-- RStudio is an Integrated Development Environment.
+- RStudio is an Integrated Development Environment (IDE).
 - Easier to work with than R on it's own, since it it a bit more 'point and clicky'
 - Allows
     - Code editing
@@ -98,7 +98,7 @@ Explain each window.
 - Files - actually a helper window. Gives you files, help, plots. Warn people not to delete files from their computer.
 :::
 
-## Adjusting your view of RStudio.
+## Adjusting your view of RStudio
 
 ![](../Images/RStudioButtonsHighlighted.png)
 
@@ -143,11 +143,9 @@ Say that the ## sign is just printed on the slide as an indicator that we are se
 - Type `2 + 2`, then `Enter`.
 - What happens?
 - To ask R to run code
-
-- Highlight the code and:
-    - MacOS: `Cmd + Enter`
-    - Windows: `Ctrl + Enter`
-
+    - Highlight the code and:
+        - MacOS: `Cmd + Enter`
+        - Windows: `Ctrl + Enter`
 - Notice the output in the console.
 
 ## Saving your work
@@ -161,7 +159,7 @@ Say that the ## sign is just printed on the slide as an indicator that we are se
 - Restart R Studio and click the `open` icon
 - Find your file and open
 - Your code still there
-- You can run it again.
+- You can run it again
 
 ::: notes
 
@@ -177,19 +175,23 @@ See
 
 ## R building blocks
 
-- Names
+- Object names
 - Data
     - Vectors
-    - Data Frames
+    - Data frames
+    - Lists
 - Functions
     - Stored in packages
 
 ## 3 Main Building Blocks
 
-- Names
-    - Everything needs a name in R: tables, plots, data files
+- Object names
+    - Everything needs a name in R: tables, plots, data files, functions 
 - Data
-    - Data comes in different forms: Real Numbers/Counting Numbers/Characters etc.
+    - Data comes in different classes: 
+        - Real numbers - `numeric`
+        - Discrete numbers - `integer`
+        - Characters - `character`
     - Data is stored in vectors
     - Vectors are stored in data frames
 - Functions
@@ -197,10 +199,10 @@ See
     - Take an input (raw material) use function (factory) get an output (product)
     - Functions are collated into packages
 
-## Names
+## Object names
 
 - You assign names to objects in R.
-- This is the assignment operator `<-`
+- This is the assignment operator `<-`(`=`)
 - Shortcut:
     - Mac OSX: `Option + - `
     - Windows: `Alt + - `
@@ -215,7 +217,7 @@ practice
 Get them to do this.
 :::
 
-## Names
+## Object names
 
 - You can store any object under a name.
 - This example stores a string. You need to use quote marks to assign it.
@@ -229,6 +231,12 @@ say_hello
 ```{r, error = TRUE}
 say hello <- "hello"
 ```
+
+::: notes
+
+a string is a 
+
+:::
 
 ## Data
 - R is a statistical computing language
