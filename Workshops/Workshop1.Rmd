@@ -61,7 +61,18 @@ output:
 ## Typical data science pipeline
 
 ![](../Images/Pipeline.png)
-*https://r4ds.had.co.nz/*
+
+::: notes
+Taken from https://r4ds.had.co.nz/introduction.html
+
+- **Import**: need to import data into R
+- **Tidy**: in short, this is the process of arranging data such that each variable is a column and each observation is a row. Done to ensure compatibility with functions.
+- **Transform**: can be narrowing in on observations of interest (e.g. only female patients); creating new variables that are functions of existing variables (e.g. time of stay = discharge date - arrival date); calculating summary statistics (e.g. counts or means).
+- Process of **tidying** + **transforming** = **wrangling**
+- **Visualisation**: once data has been transformed, it should be visualised. A good visualisation will show you things that you did not expect, or raise new questions about the data.
+- **Modelling**: once your question is sufficiently precise, you can use a model to answer the question.
+- **Communication**: critical part of any data analysis project is communicating the results to others.
+:::
 
 ## Working with RStudio 
 
@@ -177,8 +188,9 @@ See
 
 - Object names
 - Data
-    - Vectors
-    - Data frames
+    - **Vectors**
+    - **Data frames**
+    - Matrices
     - Lists
 - Functions
     - Stored in packages
@@ -192,8 +204,8 @@ See
         - Real numbers - `numeric`
         - Discrete numbers - `integer`
         - Characters - `character`
-    - Data is stored in vectors
-    - Vectors are stored in data frames
+    - Data can be stored in vectors
+    - Vectors can be stored in data frames
 - Functions
     - Little factories
     - Take an input (raw material) use function (factory) get an output (product)
@@ -220,7 +232,7 @@ Get them to do this.
 ## Object names
 
 - You can store any object under a name.
-- This example stores a string. You need to use quote marks to assign it.
+- This example stores a character variable. You need to use quote marks to assign it.
 
 ```{r}
 say_hello <- "hello"
@@ -231,12 +243,6 @@ say_hello
 ```{r, error = TRUE}
 say hello <- "hello"
 ```
-
-::: notes
-
-a string is a 
-
-:::
 
 ## Data
 - R is a statistical computing language
@@ -256,7 +262,7 @@ c(50, 25, 32, 67, 46, 19, 48)
     ```{r, echo = FALSE}
 c(37.5, 37.1, 37.3, 38.3, 37.4, 38.9)
 ```
-    - A vector of characters - an example would be name.
+    - A vector of characters/strings - an example would be name.
     ```{r, echo = FALSE}
 c("Adam", "Sally", "Eve", "John", "James")
 ```
@@ -264,15 +270,21 @@ c("Adam", "Sally", "Eve", "John", "James")
     ```{r, echo = FALSE}
 c(TRUE, FALSE, FALSE, TRUE, TRUE)
 ```
-    
-## Naming vectors.
+- You can always check the data type in a vector using the function `class()`.
+```{r}
+logical_vector <- c(TRUE, FALSE, FALSE, TRUE, TRUE)
+class(logical_vector)
+```
+
+
+## Naming vectors
 
 The `c()` function combines individual values into a single vector.
 ```{r}
 # Storing several ages in one vector.
 age <- c(50, 25, 32, 67, 46, 19)
 age
-# Storing several names in one vector.
+# Storing several peoples' names in one vector.
 name <- c("Adam", "Sally", "Eve", "John", "James", "Jennifer")
 name
 ```
@@ -309,16 +321,16 @@ data.frame(name, age, gender)
     - `Name: "Adam", "Sally", "Eve", "John", "James", "Jennifer"`
     - `Age: 50, 25, 32, 67, 46, 19`
     - `Gender: "male", "female", "female", "male", "male", "female"`
-- Quotation marks are not needed for names in R, but are when your data is a string e.g. "male", "female"
+- Quotation marks are not needed for names in R, but are when your data is made up of characters e.g. "male", "female".
 - As a rule:
     - Characters on the left side of the assignment operator. No quote marks.
     - Characters on the right side of the assignment operator. Use quote marks if storing letters.
 
 ## Creating a data frame - exercise
-- Combine these vectors into a data frame using `data.frame()`
-    - Hint, the vector names need to go inside the `()`
-- Save the data frame under the name `patients`
-- Print the data frame called `patients` to your console
+- Combine these vectors into a data frame using `data.frame()`.
+    - Hint, the vector names need to go inside the `()`.
+- Save the data frame under the name `patients`.
+- Print the data frame called `patients` to your console.
 
 ## Creating a data frame - solution
 
@@ -336,28 +348,28 @@ gender <- c("male", "female", "female", "male", "male", "female")
 patients <- data.frame(name, age, gender)
 ```
 
-## This is the data frame.
+## This is the data frame
 ```{r}
 patients
 ```
 
-- R arranges the vectors as columns in the data frame
-- R names the columns of the data frame after the names of the vectors
-- R numbers each row of the data frame
+- R arranges the vectors as columns in the data frame.
+- R names the columns of the data frame after the names of the vectors.
+- R numbers each row of the data frame, creating an index for each row within the data frame.
 
 ## Recalling a vector in a data frame
 - Data frame colums are vectors.
 - `$` can be used to extract a vector from a data frame.
-- We can get the `age` column from the data frame `group`
+- We can get the `age` column from the data frame `patients`.
 ```{r}
 patients$age
 ```
 
 ## Vectors - other properties
-- Add a value of TRUE to a vector of integers
-- Give it a name
-- Recall the vector
-- Use `str()` to examine the structure of the vector.
+- Add a value of TRUE to a vector of integers.
+- Give it a name.
+- Recall the vector.
+- Use `str()`/`class()` to examine the structure of the vector.
 - What has happened?
 
 ## Vectors - other properties
@@ -366,13 +378,14 @@ patients$age
 test <- c(1, 2, 3, 4, TRUE)
 test
 str(test)
+class(test)
 ```
 
 - The value of `TRUE` has been changed to 1.
 - The vector is still a numeric vector
 
 ## Vectors - other properties
-- Add a string to a vector of integers
+- Add a character variable to a vector of integers
 - Recall the vector
 - What has happened?
 
@@ -381,12 +394,13 @@ str(test)
 ```{r}
 test2 <- c(1, 2, 3, 4, "hi")
 test2
+class(test2)
 str(test2)
 ```
 
 
-- The string has been added on to the end of the vector.
-- The vector is now a string vector.
+- The character variable has been added on to the end of the vector.
+- The vector is now a character vector.
 
 ## Functions as factories
 ![](../Images/Function1.png)
@@ -399,15 +413,15 @@ str(test2)
 
 
 ## Functions
-- Sometimes taught as a "black box"
-- You can think of them as a factory
-- Usually labelled as a verb (they are "doing" something)
-- Many come built into R
+- Sometimes taught as a "black box".
+- You can think of them as a factory.
+- Usually labelled as a verb (they are "doing" something).
+- Many come built into R.
     - `Sys.time()`
     - `mean(1:100)`
-- You can also install 'packages' containing bundles of functions
+- You can also install 'packages' containing bundles of functions.
 
-- View each function as a separate separate factory in a production line
+- View each function as a separate factory in a production line.
 
 ## Functions in a line
 ![](../Images/Function4.png)
@@ -415,36 +429,36 @@ str(test2)
 ## Functions
 - You have been using functions already!
 - `data.frame()` is a function.
-- `age, gender, weight` are arguments.
+- `age, gender, weight` are the input arguments.
 
 ```{r}
 data.frame(name, age, gender)
 ```
 
-- The data frame is the output
+- The data frame is the output.
 
 ## Try these functions yourself. What do they do?
-- Use the `group` data frame as the argument.
+- Use the `patients` data frame as the argument.
 
 - `head()`
 - `tail()`
 - `summary()`
-- `mean()`
 
 ## Try these functions yourself.
 - `head()` Gives you the first 6 rows
 - `tail()` Gives you the last 6 rows
 - `summary()` Gives an overview of the object
-- `mean()` Gives the mean of a numeric vector
+```{r}
+summary(patients)
+```
+
 
 ## Warning note
-- Functions are carrying out pre-written instructions
-- They will fail if they are supplied with the wrong kind of data - they will return an error message instead
-- Try `mean(group$gender)`
-- There are other constraints
-- Dependent on the function itself
-- HINT: some functions will not work with missing values
-- You will then need to specify the argument to remove these missing values
+- Functions are carrying out pre-written instructions.
+- They will fail if they are supplied with the wrong kind of data - they will return an error message instead.
+- Try `mean(patients$gender)`
+- There are other constraints, which are dependent on the function itself.
+- HINT: some functions will not work with missing values. You will then need to specify the argument to remove these missing values.
 
 ## Help with functions
 - How do you find out how to use a particular function?
@@ -483,10 +497,10 @@ value = output
 - Look up the function `ls`
 - What are the arguments you can give the function?
 
-    - How do you specify the argument for 'pattern'? Try it
+    - How do you specify the argument for 'pattern'? Try it.
     - When might this be useful?
 
-    - How do you specify the argument for 'sorted'? Try it
+    - How do you specify the argument for 'sorted'? Try it.
     - When might this be useful?
 
 ::: notes

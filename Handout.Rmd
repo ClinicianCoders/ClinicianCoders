@@ -100,17 +100,17 @@ The supporting panes include:
 
 We propose that there are three main building blocks to R:
 
-1.	Names
+1.	Object names
 2.	Data
 3.	Functions
 
-### 1. Names
+### 1. Object names
 
-Names are assigned to a value/function/file. 
+Names are assigned to an object (e.g value/function/file). 
 
 The assignment operator is `<-`.
 
-You can then recall the value/function/file by using the name
+You can then recall the value/function/file by using the object's name
 
 ```{r}
 # Assign the value of 2+2+6 to the name `practice`. Notice there is no output in the
@@ -120,7 +120,7 @@ practice <- 2 + 2 + 6
 practice
 ```
 
-You can also assign names to text, but note that the text needs to be surrounded with "". Also note that object names can't have spaces in them.
+You can also assign names to a text object, but note that the text needs to be surrounded with "". Also note that object names can't have spaces in them.
 
 ```{r}
 say_hello <- "hello"
@@ -130,7 +130,7 @@ say_hello
 
 ### 2. Data
 
-R is a statistical computing language; statistics uses vectors and matrices. 
+R is a statistical computing language; statistics uses vectors, matrices and dataframes. 
 
 #### *Vector*
 
@@ -167,6 +167,7 @@ name <- c("Adam", "Sally", "Eve", "John", "James", "Jennifer")
 name
 
 gender <- c("male", "female", "female", "male", "male", "female")
+gender
 ```
 
 You can recall specific elements of a vector using the name and `[]`.
@@ -185,11 +186,11 @@ If you add a `character` to a vector of integers, R will change the whole vector
 ```{r}
 test <- c(1, 2, 3, 4)
 # Note that `test` is a numeric vector.
-str(test)
+class(test)
 # Add a character to `test`
 test <- c(1, 2, 3, 4, "x")
 # Note that `test` is now a character vector.
-str(test)
+class(test)
 ```
 
 If you add a `logical` to an integer vector, `TRUE` is converted to 1 and `FALSE` is converted to 0. The vector remains numeric.
@@ -199,17 +200,10 @@ test2 <- c(1, 2, 3, 4, TRUE)
 # Note that the last element is `1`.
 test2
 # Note that the vector is numeric.
-str(test2)
+class(test2)
 ```
 
 \newpage
-
-#### *Matrix*
-
-A matrix is collection of elements of the same data type, arranged into rows and columns. 
-```{r, echo = FALSE}
-matrix(1:9, nrow = 3, ncol = 3)
-```
 
 #### *Data Frame*
 
@@ -243,6 +237,26 @@ Try `patients$age`.
 
 \newpage 
 
+#### *Matrix*
+
+A matrix is collection of elements of the same data type, arranged into rows and columns. 
+```{r, echo = FALSE}
+matrix(1:9, nrow = 3, ncol = 3)
+```
+
+#### *List*
+
+You are unlikely to use these much, but it is good to know that they exist.
+A list can contain elemnts of different types e.g. characters, numbers, vectors and even another list.
+Lists are constructed using `list()`instead of `c()`.
+```{r}
+example_list <- list(name, age, gender, patients)
+example_list
+
+```
+
+
+
 ### 3.	Functions
 
 Finally, functions. 
@@ -256,7 +270,6 @@ Examples of some functions which are useful for exploring your dataset are:
 - `head(dataset_name)` - prints the first 6 rows.
 - `tail(dataset_name)` - prints the last 6 rows.
 - `summary()` - gives you infomration about either a data frame or a vector.
-- `mean()` - calculates the mean of a numeric vector.
 
 R has many inbuilt functions. Packages are repositories of functions separate to this inbuilt content. To access these packages from the online package repository, you need the commands:
 
