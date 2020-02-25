@@ -9,9 +9,9 @@ This is a guide to help you understand the structure of the day. We hope that to
 
 ### Structure of the Course
 
-- The course is made up of a total of 7 workshops
-- 5 of these consist of a set of slides
-- 2 of these (workshop 2 and 7) are *hands on* sessions for the candidates
+- The course is made up of a total of 8 workshops
+- 6 of these consist of a set of slides
+- 2 of these (workshop 2 and 8) are *hands on* sessions for the candidates
     - Here your role as facilitator will be slightly different
     - You will be supporting candidates on an individual basis with their queries as they work through problems
 - For each workshop there will be 3 Facilitators
@@ -40,15 +40,17 @@ This is a guide to help you understand the structure of the day. We hope that to
 
 #### Day 2
 
-09:30 - 11:20 Workshop 5: Data Visualisation
+09:30 - 11:20: Workshop 5: Data visualisation
 
-11:20 - 11:40:   Coffee Break
+11:20 - 11:40: Coffee break
 
-11:40 - 13:30:   Workshop 6: Basic Satistics
+11:40 - 12:20: Workshop 6: Statistics in R primer
 
-13:30 - 14:15:   Lunch
+12:20 - 13:30: Workshop 7: Control flow and looping
 
-14:15 - 16:00:   Workshop 7: Using your own Data
+13:30 - 14:15: Lunch
+
+14:15 - 16:00: Workshop 8: Using your own data
 
 
 ## General tips.
@@ -70,20 +72,19 @@ Consider using a 'red sticker, green sticker' method of checking which candidate
 
 ### Tips on individual workshops.
 
-#### The welcome slides.
+#### The welcome slides
 
 The instuctor needs to make sure that each candidate has met the prerequisites. Feel free to pause and help candidates out.
 
-A note on the datasets for workshop7. Candidates can either bring their own data, and work with it in R, or they can use the synthetic CCHIC dataset. 
+A note on the datasets for workshop 8. Candidates can either bring their own data, and work with it in R, or they can use the synthetic CCHIC dataset. 
 
 At the end of this, upload the pdf document of the handout to the slack channel so that candidates can access it throughout the course. 
 
-
-#### Workshop 1. 
+#### Workshop 1 
 
 Just consists of the slides. 
 
-#### Workshop 2.
+#### Workshop 2
 
 This does not include slides. Candidates navigate to the 'Workshop 2' section of the handout, read it and follow the instructions there. 
 
@@ -95,30 +96,34 @@ Instructors should upload the file called `dirty_CCHIC.xlsx` to Slack, get the c
 
 It may be helpful for instructors to split the candidates into small groups of 3-5 people each, and get each group to fix a particular problem with the csv file. The groups then discuss the changes they made.
 
-#### Workshop 3.
+#### Workshop 3
 
 Just the slides. 
 Share the file called `clean_CCHIC.csv` on Slack. Aim to read in the csv file and have a dataframe called `cchic` in each candidates R environment by the time the workshop is over. 
 
-#### Workshop 4.
+#### Workshop 4
 
 This includes both the slides and an additional R script. The instructor presents the slides, and the candidates can follow along using the R script. Alternatively, they can type as they go along. 
 
 Remind the candidates that they will need the variables created in this session on the next day. This means that their `cchic` dataframe needs to contain a `los` variable. 
 
-#### Workshop 5.
+#### Workshop 5
 
 Remind candidates to load the same R object they created the day before. This cchic object should include the `los` variable. Allow a bit of time to make sure everyone has the dataset in their environment before demonstrating `ggplot` functions. 
 
 The workshop includes both the slides and the R script. At one point in the slides, candidates will be asked to open up the R script, and work through those examples. The R script should help them get a better idea of how small changes in the code can build on the same base graph. 
 
-#### Workshop 6.
+#### Workshop 6
 
 Just consists of the slides.
 
-#### Workshop 7.
+#### Workshop 7
 
-Includes an R script which is just a template for working in R and analysing data generally. Upload to the slack channel at the beginning, and let candidates look through it in thier own time.
+
+
+#### Workshop 8
+
+Includes an R script which is just a template for working in R and analysing data generally. Upload to the slack channel at the beginning, and let candidates look through it in their own time.
 
 Allow candidates to work with their own data. Just go around providing assistance as required. If candidates have not brought in their own data, give them the opportunity to answer questions they may be interested in using the synthetic CCHIC dataset. 
 

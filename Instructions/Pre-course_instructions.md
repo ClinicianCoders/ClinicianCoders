@@ -48,7 +48,7 @@ You can download the binary files for your distribution from [CRAN](http://cran.
 
 ### 3. Download and install a spreadsheet program
 
-This only applies if you don't already have Excel or simillar installed.
+This only applies if you don't already have Excel or similar installed.
 
 Spreadsheets are useful for data entry and data organization, and some subsetting and sorting of the data as well as getting an overview of the data. To interact with spreadsheets, we can use [LibreOffice](https://www.libreoffice.org/), [Microsoft Excel](https://products.office.com/en-us/excel), [Gnumeric](http://www.gnumeric.org/), [OpenOffice.org](https://www.openoffice.org/), or other programs. Commands may differ a bit between programs, but general ideas for thinking about spreadsheets are the same.
 
@@ -58,9 +58,9 @@ For this lesson, if you don't have a spreadsheet program already, you can use [L
 Slack is a geeky version of WhatsApp, but much better for coding and collaborating. We will use it to share files. You can use it chat, to ask questions, share material, and provide feedback. You should recieve an email invite to our group before the course.
 
 ### 5. Decide on the dataset you want to use for practice.
-The course is ran on a synthetic version of the CCHIC database, which is a Critical Care Collaboration across trusts. This is not real patient data, but is made to look real! You will all have access to this dataset. 
+The course is run on a synthetic version of the CCHIC database, which is a Critical Care Collaboration across trusts. This is not real patient data, but is made to look real! You will all have access to this dataset. 
 
-Workshop 7 of this course allows you to put some of what you have learnt into practise. You can either come in with your own dataset, and let us help you get started, or you can continue using the synthetic CCHIC dataset. 
+Workshop 8 of this course allows you to put some of what you have learnt into practise. You can either come in with your own dataset, and let us help you get started, or you can continue using the synthetic CCHIC dataset. 
 
 If you have problems with installing software, there is a small amount of setup time allocated for this at the beginning of the course. Bring your laptop, and we will be happy to help.
 
