@@ -86,7 +86,8 @@ Just consists of the slides.
 
 #### Workshop 2
 
-This does not include slides. Candidates navigate to the 'Workshop 2' section of the handout, read it and follow the instructions there. 
+There are a set of slides to get candidates started, but this is primarily a *hands-on* session for the candidates.
+Once introduced to tidy/messy data, candidates navigate to the 'Workshop 2' section of the handout, read it and use the section entitled "Common Mistakes to Avoid and Correct" as inspiration for there data tidying. 
 
 The workshop aims to demonstrate the principles of tidy data. 
 
