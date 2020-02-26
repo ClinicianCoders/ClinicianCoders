@@ -346,7 +346,7 @@ cchic <- cchic %>%
 
 ## 6. Columns to rows and back again
 
-![Convert data spread over several variables into a single one](../Images/WideToLong.png)
+![Convert data spread over several variables into a single one](../Images/gatherspread.png)
 
 ::: notes
 Warn them that this concept takes a while to grasp.
