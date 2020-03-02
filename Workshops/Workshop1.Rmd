@@ -24,6 +24,7 @@ output:
 ## Content
 
 - Motivation for R: what and why?
+- Typical data science pipeline
 - RStudio: a tour
 - R building blocks
 - Using/writing functions 
