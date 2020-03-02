@@ -316,13 +316,13 @@ data.frame(name, age, gender)
 - Each vector becomes a column in the table
 - A properly formatted excel spreadsheet is essentially a data frame
 
-## Creating a data frame - excercise
+## Creating a data frame - exercise
 
 - Create and name vectors containing information about these 6 patients.
     - `Name: "Adam", "Sally", "Eve", "John", "James", "Jennifer"`
     - `Age: 50, 25, 32, 67, 46, 19`
     - `Gender: "male", "female", "female", "male", "male", "female"`
-- Quotation marks are not needed for names in R, but are when your data is made up of characters e.g. "male", "female".
+- Quotation marks are not needed for object names in R, but are when your data is made up of characters e.g. "male", "female".
 - As a rule:
     - Characters on the left side of the assignment operator. No quote marks.
     - Characters on the right side of the assignment operator. Use quote marks if storing letters.
@@ -359,7 +359,7 @@ patients
 - R numbers each row of the data frame, creating an index for each row within the data frame.
 
 ## Recalling a vector in a data frame
-- Data frame colums are vectors.
+- Data frame columns are vectors.
 - `$` can be used to extract a vector from a data frame.
 - We can get the `age` column from the data frame `patients`.
 ```{r}
@@ -512,7 +512,7 @@ Work through this with them.
 
 - There are bunch of functions that come with R. They are 'base R' functions.
 
-- Thousands of open access functions in other packages
+- Thousands of open access functions in other packages.
 - To access these: install the packages, then load them.
 
 - Let's install and load the 'tidyverse' package

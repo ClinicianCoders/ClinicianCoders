@@ -60,7 +60,7 @@ The handout also includes some tips on importing data from Google Sheets.
 :::
 :::::::::::: 
 
-## Files, Directories and File Paths
+## Files, directories and file paths
 - R can not read your data if it does not know where it is stored.
 - Your computer has a system for storing files within directories.
 - Directories are also known as folders.
@@ -69,7 +69,7 @@ The handout also includes some tips on importing data from Google Sheets.
 ## File paths
 ::::::::::::{.columns}
 :::{.column}
-- Starts with a `Root Directory` and then `Branches` are specified.
+- Starts with a `Root directory` and then `Branches` are specified.
 - You can find out the file path name by right clicking on any file:
   - `Properties` in Windows
   - `Get Info` in Mac  
