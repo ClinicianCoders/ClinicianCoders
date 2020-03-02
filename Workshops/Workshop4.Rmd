@@ -310,7 +310,7 @@ test_dates
 ```
 
 
-## Parsing dates.
+## Parsing dates
 
 We can extract components of dates. 
 

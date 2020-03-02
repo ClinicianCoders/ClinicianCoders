@@ -66,7 +66,7 @@ The handout also includes some tips on importing data from Google Sheets.
 - Directories are also known as folders.
 - The language used to instruct on the location of the file in known as the `file path`. 
 
-## File Paths
+## File paths
 ::::::::::::{.columns}
 :::{.column}
 - Starts with a `Root Directory` and then `Branches` are specified.
@@ -147,7 +147,7 @@ Click `Import Dataset` tab in the `Environment` pane
 :::
 ::::::::::::
 
-## Browse Files
+## Browse files
 ::::::::::::{.columns}
 :::{.column}
 - Now browse for your file  
@@ -204,7 +204,7 @@ Get them to do this
 
 ![Your data has been imported as a `tibble`, a specially formatted data frame. Notice how it reports the data type of each column under their name, similar to `str()` on a vector.](../Images/Tibble.png)
 
-## Viewing Your Data in R
+## Viewing your data in R
 ::::::::::::{.columns}
 :::{.column}
 - You have imported your data into R.
@@ -283,7 +283,7 @@ str(cchic)
 
 Prints the data type of each variable in `cchic`.
 
-## Look at specific items.
+## Look at specific items
 
 You can look at specific data points.
 
@@ -293,7 +293,7 @@ cchic[21, 5]
 
 This displays the the piece of data in the 21st row and 5th column.
 
-## Selecting variables using $ sign.
+## Selecting variables using $ sign
 
 - You can also use the `$` function.
 - Enter `data_frame_name$variable_name`
