@@ -21,7 +21,7 @@ cchic <- read_csv("../clean_CCHIC.csv")
 ## Content
 
 - General data visualisation tips
-- Visualising Data in R with `ggplot2`
+- Visualising data in R with `ggplot2`
 
 ## 
 
@@ -148,24 +148,19 @@ We now get to draw graphs!
 
 - Base R has visualisation commands
 
-- `ggplot2` package which allows you to 'layer' features of graphs
-    - this is what we will use
-    - load it now
-    - `library(ggplot2)`
+- `ggplot2` package (part of `tidyverse`):
+    - Grammar of graphics - layered structure
+    - To load it now: `library(ggplot2)`
 
 ## Structure of a ggplot command
 
-It takes a while to get used to the structure.
-
-There are different forms of syntax.
-
-Different syntax possible
-
-But in general:
+- It takes a while to get used to the structure.
+- There are different forms of syntax.
+- The base skeleton:
 
 ```{r, eval = FALSE}
-ggplot(data = date_frame_name) +
-  style_of_plot(mapping = aes(x = vector_name1, y = vector_name2))
+ggplot(data = df) +
+  style_of_plot(mapping = aes(x = col_name_1, y = col_name_2))
 ```
 
 ::: notes 
@@ -174,11 +169,11 @@ This will become more clear once we see examples
 
 ## ggplot is very versatile
 
-You can use the same structure for many types of graphs.
+- You use the same syntax structure to produce different types of graphs.
 
 ```{r, eval = FALSE}
-ggplot(data = date_frame_name) +
-  style_of_plot(mapping = aes(x = vector_name1, y = vector_name2)) +
+ggplot(data = df) +
+  style_of_plot(mapping = aes(x = col_name_1, y = col_name_2)) +
   other_arguments
 ```
 
@@ -188,19 +183,17 @@ Explain a couple of things you can add on using the + sign.
 
 ## What is a 'geom'?
 
-A `geom` is a visual aspect of a graph.
-
-- dots
-- lines
-- bars
-
-Look at the `ggplot2` cheatsheet for more options.
+- A `geom` is a visual aspect of a graph.
+    - dots
+    - lines
+    - bars
+- Look at the `ggplot2` cheatsheet for more options.
 
 ## Create a dot plot
 
-Open up the R script called `Workshop5.R`.
-Run through the commands in it.
-Notice how changing small parts of the main command change the appearance of the graph. 
+- Open up the R script called `Workshop5.R`.
+- Run through the commands in it.
+-Notice how changing small parts of the main command change the appearance of the graph. 
 
 Notice that we use `geom_point` for a dot plot. We will use other geoms later.
 
@@ -233,7 +226,6 @@ ggplot(data = cchic) +
   geom_smooth(mapping = aes(x = wbc, y = crp, colour = sex))
 ```
 
-
 ## Combining multiple geoms
 
 ```{r, , message=FALSE}
@@ -248,15 +240,10 @@ ggplot(data = cchic) +
 
 ## Drawing a bar graph
 
-- `geom_bar` and `stat_count` are interchangeable
-
 ```{r, eval = T, message=FALSE}
 ggplot(data = cchic) +
   geom_bar(mapping = aes(x = vital_status))
 
-
-ggplot(data = cchic) +
-  stat_count(mapping = aes(x = vital_status))
 ```
 
 ## Proportion instead of count
@@ -284,7 +271,12 @@ ggplot(data = cchic) +
 
 ```{r, eval = T, message=FALSE}
 ggplot(data = cchic) +
-  geom_bar(mapping = aes(x = vital_status, fill = sex), position = "fill")
+  geom_bar(mapping = aes(x = vital_status, fill = sex), position = "dodge")
 ```
+
+## Useful resources
+
+- [ggplot cheatsheet](https://rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf)
+- [ggpubr](http://www.sthda.com/english/articles/24-ggpubr-publication-ready-plots/)
 
 # Create your own plots now!

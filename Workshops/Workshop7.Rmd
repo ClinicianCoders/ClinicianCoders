@@ -1,5 +1,5 @@
 ---
-title: "Basic Statistics"
+title: "Control flow & looping"
 
 output: 
   powerpoint_presentation:
@@ -9,7 +9,6 @@ output:
 ```{r, include = FALSE}
 # We will need this data later.
 library(tidyverse)
-library(lubridate)
 cchic <- read_csv("../intermediate_CCHIC.csv")
 ```
 
@@ -17,427 +16,335 @@ cchic <- read_csv("../intermediate_CCHIC.csv")
 
 ![](../Images/Clinician Coders Branding_FINAL_CMYK_Colour.png)
 
-## Content
+## Outline
 
-- Types of Data
-- Exploring your dataset
-- Descriptive Statistics
-- Inferential Statistics
-
-## Wait!
-
-- Make sure `cchic` R dataframe from your work yesterday is loaded
-- Ensure this includes the variables you created including `los`
+- **Concept** + practice = expert
+- Conditional statements 
+- Looping fundamentals
+- 
 
 ::: notes
-Help them load the dataset if needed. This is the same one they used in the morning. It should include the length of stay variable.
+Try to teach a concepts then they can go home and practice. 
 :::
 
-## The big picture
+## You will learn
 
-- Research often seeks to answer a question about a larger population by collecting data on a small portion 
-- Data collection:
-    - Many variables
-    - For each person/unit.
+- When might I want to restrict use a conditional statement? 
+- How do I write an if else statement? 
+- What is the basic structure of a loop? 
+- Why are loops important? 
 
-## Descriptive and inferential statistics
+## Before we start
 
-- WAIT!
-- First be aware of the types of data 
-- Guides:
-    - How best to describe the data you have
-    - How best to analyse (which test)
-        - Note that data scientists and pure statisticians moving away from being ‘test-focused’, but will discuss how to run some basic ones in this lesson. 
+- Again, please make sure the `cchic` dataframe is loaded into your R environment
+- Please download Workshop7.R via https://github.com/ClinicianCoders/ClinicianCoders/Workshops/Workshop7.R
+- Question: How do we calculate the mean of every numeric variable in `chicc` and print it out? 
 
-## Data types
+## Control flow inituition 
 
-- Continuous 
-- Discrete
-    - Nominal
-    - Ordinal 
-    - Interval
+- In the case of a particular event, do action x
+- Permits flexibility 
+- No one size fits all algorithms
 
 ::: notes
-Data types have been covered in course before. The next few slides should be a bit of a recap.
-:::
-## Continuous variables
-
-:::::::::::::: {.columns}
-::: {.column}
-- e.g. age, height, weight 
-- Have distributions:
-    - Gaussian
-    - Poisson
-    - Binomial
-    - Cauchy/Lorenz
-
-- Can’t be described
-:::
-::: {.column}
-![](../Images/ContinuousDistribution.png)
-:::
-::::::::::::::
-
-## What is normally distributed data?
-
-![](../Images/NormalDistribution.png)
-
-## Types of discrete variables
-
-- Nominal 
-    - e.g. hair colour, types of antibiotics 
-    - There is no order between the data types (e.g. blonde, brunette, red hair)
-
-## Types of discrete variables
-
-:::::::::::::: {.columns}
-::: {.column}
-- Ordinal 
-    - There is an order e.g. `care_level` where Level 3 > Level 2 > Level 1 etc.
-    - However, the difference between Level 1 and Level 2 critical care may not be the same as the difference between Level 2 and Level 3. 
-:::
-::: {.column}
-![](../Images/OrdinalData.png)
-:::
-::::::::::::::
-
-## Types of discrete data
-
-:::::::::::::: {.columns}
-::: {.column}
-- Interval
-    - There is an order to data points (e.g. `age_cat` for age centile) and the difference
-    between these points are equal (e.g. 10 years)
-:::
-::: {.column}
-![](../Images/IntervalData.png)
-:::
-::::::::::::::
-
-## Describing data
-
-- Continuous variables
-- Discrete variables
-
-::: notes
-How do we convey information on what your data looks like, using numbers or figures?
+If I gave you one instruction, the entire time, this would greatly limit the complexity of what I can tell someone to do. If it rains, take an umbrella. If it you have gone to visited Wuhan, quarantine yourself
 :::
 
-## Describing continuous data.
+## Control flow syntax
 
-:::::::::::::: {.columns}
-::: {.column}
-First establish the distribution of the data. 
+- Control flow is an `if` statement in R
+- There are 3 parts to an `if` statement: 
+    1. Test - Does it meet criteria? 
+    2. Action - If yes, what should the algorithm do? 
+    3. Else - And if not? 
+
+## Example 1
+    
+```{r}
+
+raining <- TRUE
+
+if(raining == TRUE){
+  
+  print("Bring an umbrella!")
+  
+}
+
+```
+
+## Types of conditional tests
+
+- Different syntax for different test: 
+    - `x == y` - is x equal to y 
+    - `x != y` - is x NOT equal to y
+    - `x < y` - is x less than y
+    - `x <= y` - is x less than or equal to y
+    - `x > y` - is x greater than y
+    - `x >= y` - is x greater than or equal to y
+    
+## Example 2 
+
+```{r}
+
+temp <- 32
+
+if(temp >= 25){
+  
+  print("Put on sunscreen")
+  
+}
+
+```
+
+## Else...
+
+- Sometimes we want to add a clause to tell the computer what to do if the condition is NOT met
+
+## Example 3
+
+```{r}
+
+username <- "the1andonly"
+
+if(username == "the1andonly"){
+  
+  print("Welcome!")
+  
+}else{
+  
+  print(paste("Intruder alert! Move away from the machine", username))
+  
+}
+
+```
+
+## Practice 1
+
+- Try modifying example 3 to your own name, then rerunning - what does it print now? 
+- Try filling in the practice to compute the correct summary statistic (`mean` or `median`) on the variable `cchic$urea`. Use `print` to print our your result. Remeber to remove NA's if needed. 
+
+## Answer 1
+
+```{r}
+
+username <- "David"
+
+if(username == "the1andonly"){
+  
+  print("Welcome!")
+  
+}else{
+  
+  print(paste("Intruder alert! Move away from the machine", username))
+  
+}
+
+```
+
+## Answer 2
+
+```{r}
+
+ggplot(data = cchic) + 
+  geom_histogram(aes(x = urea), bins = 30)
+
+normal <- FALSE
+
+if(normal == TRUE){
+  
+  print(mean(cchic$urea, na.rm = T))
+  
+}else{
+  
+  print(median(cchic$urea, na.rm = T))
+  
+}
+
+```
+
+## Multiple conditional statements
+
+- There are times when one condition is not enough 
+- Here, we can string together multiple (as many as you like)  `else if` statements
+
+## Example 4
+
+```{r}
+
+mean_urea <- mean(cchic$urea, na.rm = T)
+median_urea <- median(cchic$urea, na.rm = T)
+
+if(median_urea < mean_urea){
+  
+  print("Data is negatively skewed")
+  
+}else if(median_urea > mean_urea){
+
+  print("Data is positively skewed")
+  
+}else{
+  
+  print("Data is normally distributed")
+  
+}
+
+```
+
+## Why loop?
+
+- Copy pasting code is bad
+- Rule of thumb if you copy-paste > 2 time, loop instead
+- Huge/mutiple data sets
+- Less human error-prone
+- Perform same function many times
+
+## Loop syntax
+
+- **For** and while loops 
+- Loops have 2 parts: 
+    1. Number of iterations
+    2. Body - what to do each iteration?
+    
+## Example 5
+
+```{r}
+
+for(i in 1:5){
+  
+  print(i)
+  
+}
+
+```
+
+## Example 6 - manual
+
+```{r}
+
+x <- c("the", "classic", "hello", "world", "example")
+print(x[1])
+print(x[2])
+print(x[3])
+print(x[4])
+print(x[5])
+
+```
+
+## Example 6 - loop
+
+```{r}
+
+x <- c("the", "classic", "hello", "world", "example")
+
+for(i in 1:5){
+  
+  print(x[i])
+  
+}
+
+```
+
+## Practice 2
+
+- Write a loop that iterates across every column of `cchic` and prints out the column name of each column. 
+- Hint: `length(cchic)` will return the number of columns.
+- Hint: `print(names(cchic[1]))` will print out the contents of column 1. 
+
+## Answer 
 
 ```{r, eval = F}
-ggplot(cchic, aes(x = age_years)) +
-  geom_histogram()
+
+for(i in 1:length(cchic)){
+  
+  print(names(cchic[i]))
+  
+}
+
 ```
 
-What is the distribution of this data?
-:::
-::: {.column}
-![](../Images/hist_age.png)
-:::
-::::::::::::::
+## Combining loops with control flow
 
-## What is the distribution of height?
+- The power of looping is illustrated when you add in the flexibility of conditional statements
 
-:::::::::::::: {.columns}
-::: {.column}
-
-Try this command
-
-```{r, eval = FALSE}
-ggplot(data = cchic, aes(x = height)) +
-  geom_histogram()
-```
-What is the distribution of this data?
-:::
-::: {.column}
-![](../Images/hist_height.png)
-:::
-::::::::::::::
-
-## Parametric vs non-parametric data
-
-- Parametric data
-    - The data follows a known distribution
-    - It can be described using *parameters*
-    - Examples of distributions include, normal, poission, exponential.
-
-- Non parametric data
-    - The data can't be said to follow a known distribution
-
-::: notes
-Emphasise that parametric is not equal to normal.
-:::
-
-## Describing parametric and non-parametric data
-
-How do you use numbers to convey what your data looks like.
-
-- Parametric data 
-    - Use the parameters that describe the distribution.
-    - For a Gaussian (normal) distribution - use mean and standard deviation
-    - For a Poission distribution - use average event rate
-    - etc.
-- Non Parametric data
-    - Use the median (the middle number when they are ranked from lowest to highest) and the interquartile range (the number 75% of the way up the list when ranked minus the number 25% of the way)
-
-- You can use the command `summary(data_frame_name)` to get these numbers for each variable.
-
-## Mean versus standard deviation
-
-- What does standard deviation mean?
-- Both graphs have the same mean (center), but the second one has data which is more spread out.
-
-```{r, eval = FALSE}
-
-# small standard deviation
-dummy_1 <- rnorm(1000, mean = 10, sd = 0.5)
-dummy_1 <- as.data.frame(dummy_1)
-ggplot(dummy_1, aes(x = dummy_1)) +
-  geom_histogram()
-
-# larger standard deviation
-dummy_2 <- rnorm(1000, mean = 10, sd = 20)
-dummy_2 <- as.data.frame(dummy_2)
-ggplot(dummy_2, aes(x = dummy_2)) +
-  geom_histogram()
-```
-
-
-::: notes
-Get them to plot the graphs. Explain that we are generating ramdom data from different distributions and plotting them. 
-::: 
-
-## Calculating mean and standard deviation
-
-```{r, eval = T}
-mean(cchic$height, na.rm = TRUE)
-```
-
-```{r, eval = T}
-sd(cchic$height, na.rm = TRUE)
-```
-
-The `na.rm` argument tells R to ignore missing values in the variable. 
-
-## Calculating median and interquartile range
-
-```{r, eval = T}
-median(cchic$age_years, na.rm = TRUE)
-```
-```{r, eval = T}
-IQR(cchic$age_years, na.rm = TRUE)
-```
-
-Again, we ignore the missing values.
-
-## Describing discrete data
-
-- Frequencies
-```{r, eval = T}
-table(cchic$vital_status)
-```
-
-- Proportions
-```{r, eval = T}
-status <- table(cchic$vital_status)
-prop.table(status)
-```
-
-
-## Inferential statistics
-
-:::::::::::::: {.columns}
-::: {.column}
-![](../Images/Golem.png)
-:::
-::: {.column}
-![](../Images/StatisticalRethinking.png)
-:::
-::::::::::::::
-
-::: notes
-Describe the golem story, and say that the book is good if you want.
-:::
-
-## Meaningful analysis
-
-- What is your hypothesis
-
-- What type of variables (data type) do you have?
-
-- What are the assumptions of the test you are using?
-
-- Interpreting the result
-
-## What is a p-value?
-
-![](../Images/pValue.png)
-
-## What we are usually hoping...
-
-![](../Images/pValue2.png)
-
-## Testing significance
-
-- p-value
-
-- <0.05
-
-- 0.03-0.049
-    - Would benefit from further testing. 
-    
-## Comparing means
-
-It all starts with a hypothesis
-
-- Null hypothesis
-    - “There is no difference in mean height between men and women”
-
-- Alternate hypothesis
-    - “There is a difference in mean height between men and women”
-    
-## More on hypothesis testing
-
-- The null hypothesis (H0) assumes that the true mean difference (μd) is equal to zero.
-- The two-tailed alternative hypothesis (H1) assumes that μd is not equal to zero.
-- The upper-tailed alternative hypothesis (H1) assumes that μd is greater than zero.
-- The lower-tailed alternative hypothesis (H1) assumes that μd is less than zero.
-
-
-- Remember: hypotheses are never about data, they are about the processes which produce the data. The value of μd is unknown. The goal of hypothesis testing is to determine the hypothesis (null or alternative) with which the data are more consistent.
-
-## Comparing means
-
-Is there a difference between the heights of males and females?
+## Example 7
 
 ```{r}
-cchic %>%
-  group_by(sex) %>%
-  summarise(av.height = mean(height, na.rm = TRUE))
-```
+
+for(i in 1:5){
+  
+  if(i == 1){
     
-Is the difference between heights statistically significant?
+    print("one")
+    
+  }else{
+    
+    print(i)
+    
+  }
+}
 
-::: notes
-Note that these number may not be the same as the one candidates see on their screens. These slides are based on a smaller version of the dataset. 
-:::
-
-## t-test
-
-:::::::::::::: {.columns}
-::: {.column}
-- Compares means between two populations
-- Paired vs. Unpaired
-:::
-::: {.column}
-![](../Images/Ttest.png)
-:::
-::::::::::::::
-
-## Assumptions of a t-test
-
-- One independent categorical variable with 2 groups and one dependent continuous variable
-
-- The dependent variable is approximately normally distributed in each group
-
-- The observations are independent of each other
-
-## Doing a t-test
-
-```{r, eval = FALSE}
-t.test(height ~ sex, data = cchic)
 ```
 
-::: notes
-Tell them to do this.
-:::
-
-## Doing the t-test
-
-```{r, echo = FALSE}
-t.test(height ~sex, data = cchic)
-```
-
-::: notes
-Quickly explain the main points of the output
-:::
-
-## Comparing counts
-
-- Is survival different between genders?
+## Example 8
 
 ```{r}
-table(cchic$sex, cchic$vital_status)
+for(i in 1:5){
+  
+  # the %% here checks the remainder when i is divided by 2
+  if(i %% 2 == 0){
+    
+    print("even")
+    
+  }else{
+    
+    print("odd")
+    
+  }
+}
+
 ```
 
-## What is our hypothesis?
+## Practice 3
 
-- Null hypothesis
-    - There is no difference in survival between men and women 
-    
-- Alternate hypothesis
-    - There is  a difference in survival between men and women 
-    
-## Assumptions of the chi-squared test.
+- Question: How do we calculate the mean of every numeric variable in `chicc` and print it out? 
+- How would we do this manually?
+- Hint: to check whether something is a numeric variable use `is.numeric()`
 
-1.  Data in cells should be frequencies or counts *not* percentages
-2.  Levels/Categories are mutually exclusive – here being a alive/dead applies
-3.  Each subject contributes to one cell – can either be male/female and alive/dead
-4.  Independent study groups
-5.  2 categorical variables
-6.  Values in each cell should be 5+
-
-`Biochem Med (Zagreb). 2013 Jun; 23(2): 143–149.`
-
-## Doing the chi-squared test.
-
-Start with `?chisq.test`. 
-Then do the test.
+## Answer - manual 
 
 ```{r}
-chisq.test(cchic$sex, cchic$vital_status)
+
+print(mean(cchic$lactate_abg))
+print(mean(cchic$ph_abg))
+print(mean(cchic$hco3_abg))
+print(mean(cchic$temp_c))
+print(mean(cchic$temp_nc))
+# etc
+
 ```
 
-::: notes
-Get them to do this, then explain the output.
-:::
+## Answer - loop
 
-## Non paramteric versions
+```{r, eval = F}
 
-Is length of stay different between genders?
+for(i in 1:length(cchic)){
+  
+  print(names(cchic[i]))
+  
+  if(is.numeric(cchic[[i]])){
+    
+    print(mean(cchic[[i]]))
+    
+  }
+  
+}
 
-```{r, message=FALSE}
-ggplot(data = cchic, aes(x = los)) +
-  geom_histogram() +
-  facet_grid(~sex)
 ```
 
-## When do you use a non-parametric test?
+## Go loopy!
 
-- When any of the the following are true.
-    - Level of measurement is nominal or ordinal
-    - Unequal sample sizes
-    - Skewed data
-    - Unequal variance
-    - Continuous data collapsed into small number of categories
+- Lots of practice, lot's of errors! 
+- But eventually, you'll never look back
 
-## Using the Mann Whitney test
 
-`??Mann-Whitney` will show you that the command is actually called `wilcox.test`.t
 
-```{r}
-wilcox.test(los ~ sex, data = cchic)
-```
-
-::: notes
-Explain the output
-:::
-
-## Lunch
-
-- Feel free to explore the handout and go through the exercices again.
