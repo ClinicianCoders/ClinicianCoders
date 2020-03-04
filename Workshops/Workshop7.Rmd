@@ -29,7 +29,7 @@ Try to teach a concepts then they can go home and practice.
 
 ## You will learn
 
-- When might I want to restrict use a conditional statement? 
+- When might I want to restrict using a conditional statement? 
 - How do I write an if else statement? 
 - What is the basic structure of a loop? 
 - Why are loops important? 

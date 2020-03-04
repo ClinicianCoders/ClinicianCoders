@@ -21,13 +21,17 @@ cchic <- read_csv("../intermediate_CCHIC.csv")
 
 - Types of Data
 - Exploring your dataset
-- Descriptive Statistics
-- Inferential Statistics
+- Descriptive statistics
+- Conducting statistical tests in R
+
+
+## 
 
 ## Wait!
 
 - Make sure `cchic` R dataframe from your work yesterday is loaded
 - Ensure this includes the variables you created including `los`
+- The `los` columns comes pre-generated in the `intermediate_CCHIC.csv` file. 
 
 ::: notes
 Help them load the dataset if needed. This is the same one they used in the morning. It should include the length of stay variable.
@@ -36,18 +40,7 @@ Help them load the dataset if needed. This is the same one they used in the morn
 ## The big picture
 
 - Research often seeks to answer a question about a larger population by collecting data on a small portion 
-- Data collection:
-    - Many variables
-    - For each person/unit.
-
-## Descriptive and inferential statistics
-
-- WAIT!
-- First be aware of the types of data 
-- Guides:
-    - How best to describe the data you have
-    - How best to analyse (which test)
-        - Note that data scientists and pure statisticians moving away from being ‘test-focused’, but will discuss how to run some basic ones in this lesson. 
+- Hypothesis driven
 
 ## Data types
 
@@ -60,6 +53,7 @@ Help them load the dataset if needed. This is the same one they used in the morn
 ::: notes
 Data types have been covered in course before. The next few slides should be a bit of a recap.
 :::
+
 ## Continuous variables
 
 :::::::::::::: {.columns}
@@ -69,9 +63,6 @@ Data types have been covered in course before. The next few slides should be a b
     - Gaussian
     - Poisson
     - Binomial
-    - Cauchy/Lorenz
-
-- Can’t be described
 :::
 ::: {.column}
 ![](../Images/ContinuousDistribution.png)
@@ -108,6 +99,7 @@ Data types have been covered in course before. The next few slides should be a b
 - Interval
     - There is an order to data points (e.g. `age_cat` for age centile) and the difference
     between these points are equal (e.g. 10 years)
+    - You can bin a continous variable into intervals. 
 :::
 ::: {.column}
 ![](../Images/IntervalData.png)
@@ -164,7 +156,7 @@ What is the distribution of this data?
 - Parametric data
     - The data follows a known distribution
     - It can be described using *parameters*
-    - Examples of distributions include, normal, poission, exponential.
+    - Examples of distributions include normal, poission, exponential.
 
 - Non parametric data
     - The data can't be said to follow a known distribution
@@ -182,7 +174,7 @@ How do you use numbers to convey what your data looks like.
     - For a Gaussian (normal) distribution - use mean and standard deviation
     - For a Poission distribution - use average event rate
     - etc.
-- Non Parametric data
+- Non-parametric data
     - Use the median (the middle number when they are ranked from lowest to highest) and the interquartile range (the number 75% of the way up the list when ranked minus the number 25% of the way)
 
 - You can use the command `summary(data_frame_name)` to get these numbers for each variable.
@@ -248,22 +240,6 @@ status <- table(cchic$vital_status)
 prop.table(status)
 ```
 
-
-## Inferential statistics
-
-:::::::::::::: {.columns}
-::: {.column}
-![](../Images/Golem.png)
-:::
-::: {.column}
-![](../Images/StatisticalRethinking.png)
-:::
-::::::::::::::
-
-::: notes
-Describe the golem story, and say that the book is good if you want.
-:::
-
 ## Meaningful analysis
 
 - What is your hypothesis
@@ -301,16 +277,6 @@ It all starts with a hypothesis
 - Alternate hypothesis
     - “There is a difference in mean height between men and women”
     
-## More on hypothesis testing
-
-- The null hypothesis (H0) assumes that the true mean difference (μd) is equal to zero.
-- The two-tailed alternative hypothesis (H1) assumes that μd is not equal to zero.
-- The upper-tailed alternative hypothesis (H1) assumes that μd is greater than zero.
-- The lower-tailed alternative hypothesis (H1) assumes that μd is less than zero.
-
-
-- Remember: hypotheses are never about data, they are about the processes which produce the data. The value of μd is unknown. The goal of hypothesis testing is to determine the hypothesis (null or alternative) with which the data are more consistent.
-
 ## Comparing means
 
 Is there a difference between the heights of males and females?
@@ -407,7 +373,7 @@ chisq.test(cchic$sex, cchic$vital_status)
 Get them to do this, then explain the output.
 :::
 
-## Non paramteric versions
+## Non-parametric versions
 
 Is length of stay different between genders?
 
@@ -440,4 +406,4 @@ Explain the output
 
 ## Lunch
 
-- Feel free to explore the handout and go through the exercices again.
+- Feel free to explore the handout and go through the exercises again.
