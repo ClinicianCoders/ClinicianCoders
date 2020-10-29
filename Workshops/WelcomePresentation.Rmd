@@ -9,7 +9,7 @@ output:
 
 ##
 
-![](../Images/Clinician Coders Branding_FINAL_CMYK_Colour.png)
+![](../Images/ClinicianCodersBranding_FINAL_CMYK_Colour.png)
 
 ## Hello!
 

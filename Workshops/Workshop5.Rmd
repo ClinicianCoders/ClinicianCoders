@@ -16,7 +16,7 @@ cchic <- read_csv("../clean_CCHIC.csv")
 
 ##
 
-![](../Images/Clinician Coders Branding_FINAL_CMYK_Colour.png)
+![](../Images/ClinicianCodersBranding_FINAL_CMYK_Colour.png)
 
 ## Content
 
