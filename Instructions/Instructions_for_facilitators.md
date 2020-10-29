@@ -9,14 +9,14 @@ This is a guide to help you understand the structure of the day. We hope that to
 
 ### Structure of the Course
 
-- The course is made up of a total of 8 workshops
+- The course is made up of a total of 7 workshops given across 4 afternoon
 - 6 of these consist of a set of slides
-- 2 of these (workshop 2 and 8) are *hands on* sessions for the candidates
+- 2 of these (workshop 2 and 7) are *hands on* sessions for the candidates
     - Here your role as facilitator will be slightly different
     - You will be supporting candidates on an individual basis with their queries as they work through problems
 - For each workshop there will be 3 Facilitators
     - 1 Lead Facilitator, who will also be co-ordinating and presenting that workshop contents
-    - 2 Assitant Facilitators
+    - 2 Assistant Facilitators
 - The Lead Facilitator could be the same person for the 2 days, different on each day or they may alternate on a single day
 - You should have been told in advance what your role will be
 
@@ -24,34 +24,37 @@ This is a guide to help you understand the structure of the day. We hope that to
 
 #### Day 1
 
-09:00 - 09:30:   Start and Welcome
+13:00 - 13:30:   Start and Welcome
 
-09:30 - 10:30:   Workshop 1: Introduction to R
+13:30 - 14:30:   Workshop 1: Introduction to R
 
-10:30 - 11:00:   Coffee Break
+14:30 - 15:00:   Coffee Break
 
-11:00 - 11:45:   Workshop 2: Cleaning your Dataset
-
-11:45 - 13:00:   Workshop 3: Getting your Data into R
-
-13:00 - 14:00:   Lunch
-
-14:00 - 16:30:   Workshop 4: Data Wranggling
+15:00 - 16:00:   Workshop 2: Cleaning your Dataset
 
 #### Day 2
 
-09:30 - 11:20: Workshop 5: Data visualisation
+13:00 - 14:15:   Workshop 3: Getting your Data into R
 
-11:20 - 11:40: Coffee break
+14:15 - 14:45:   Coffee Break
 
-11:40 - 12:20: Workshop 6: Statistics in R primer
+14:45 - 16:00:   Workshop 4: Data Wrangling
 
-12:20 - 13:30: Workshop 7: Control flow and looping
+#### Day 3
 
-13:30 - 14:15: Lunch
+13:00 - 14:30: Workshop 5: Data visualization
 
-14:15 - 16:00: Workshop 8: Using your own data
+14:30 - 15:00: Coffee break
 
+15:00 - 16:00: Workshop 7: Control flow and looping (part 1)
+
+#### Day 4
+
+13:00 - 14:00: Workshop 7: Control flow and looping (part 2)
+
+14:00 - 14:30: Coffee break
+
+14:15 - 16:00: Workshop 8: Using your own data (STRUCTURE TBA)
 
 ## General tips.
 
@@ -74,7 +77,7 @@ Consider using a 'red sticker, green sticker' method of checking which candidate
 
 #### The welcome slides
 
-The instuctor needs to make sure that each candidate has met the prerequisites. Feel free to pause and help candidates out.
+The instructor needs to make sure that each candidate has met the prerequisites. Feel free to pause and help candidates out.
 
 A note on the datasets for workshop 8. Candidates can either bring their own data, and work with it in R, or they can use the synthetic CCHIC dataset. 
 

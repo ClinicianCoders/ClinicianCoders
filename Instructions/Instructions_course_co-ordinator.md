@@ -33,7 +33,7 @@
 - Ensure each facilitator understands their role, and is happy to present chosen material
   - There is a separate document "Instructions for Facilitators"
 
-#### Set up slack channel
+#### Set up slack channel - ARE WE REMOVING THIS AND REPLACING WITH TEAMS/ZOOM chat?
 <!-- This needs completing ?can they a slack within existing clinician coders workspace-->
 #### Pre-course Instructions
 - Email candidates document with "Pre-course Instructions"

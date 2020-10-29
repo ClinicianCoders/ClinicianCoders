@@ -14,7 +14,7 @@ Please note all of the requirements specified below are free. Get in contact if 
 
 - Download and install a speadsheet programme
 
-- Join Slack
+- Join Slack (To remove?)
 
 - Decide on the dataset you want to use for practice.
 
