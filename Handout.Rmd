@@ -639,7 +639,7 @@ OR
 **The point and click method is not reproducible**  
 
 <p>
-![Notice how there is no text in the source window to describe how you got to this data](Images/Point and click.png)
+![Notice how there is no text in the source window to describe how you got to this data](Images/Pointandbclick.png)
 <p>
 
 \newpage
