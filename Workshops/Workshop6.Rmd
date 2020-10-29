@@ -121,7 +121,7 @@ if(username == "the1andonly"){
 ## Practice 1
 
 - Try modifying example 3 to your own name, then rerunning - what does it print now? 
-- Try filling in the practice to compute the correct summary statistic (`mean` or `median`) on the variable `cchic$urea`. Use `print` to print our your result. Remeber to remove NA's if needed. 
+- Try filling in the practice to compute the correct summary statistic (`mean` or `median`) on the variable `cchic$urea`. Use `print` to print our your result. Remember to remove NA's if needed. 
 
 ## Answer 1
 
