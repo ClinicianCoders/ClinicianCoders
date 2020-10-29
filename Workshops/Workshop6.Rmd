@@ -21,7 +21,7 @@ cchic <- read_csv("../intermediate_CCHIC.csv")
 - **Concept** + practice = expert
 - Conditional statements 
 - Looping fundamentals
-- 
+
 
 ::: notes
 Try to teach a concepts then they can go home and practice. 
