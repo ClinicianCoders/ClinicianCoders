@@ -639,7 +639,7 @@ OR
 **The point and click method is not reproducible**  
 
 <p>
-![Notice how there is no text in the source window to describe how you got to this data](Images/Pointandbclick.png)
+![Notice how there is no text in the source window to describe how you got to this data](Images/Pointandclick.png)
 <p>
 
 \newpage
@@ -1490,7 +1490,62 @@ There are many different resources advising you on how to present your data (inc
 
 \newpage
 
-# Workshop 6 - Basic Statistics
+# Workshop 7 - Writing functions
+
+## Introduction
+
+Up to this point, we have been using functions written by others. We can also write our own functions to carry out operations we need to compute frequently.
+
+<p>
+![](Images/WriteFunction.png)
+<p>
+
+## Write a function
+
+Try writing this function for yourself. 
+
+```{r}
+say_hello <- function(name) {
+  message <- paste("Hello", name)
+  return(message)
+}
+
+say_hello("cheryl")
+```
+
+Use this function with your own name.
+
+Let's try writing another function.
+
+```{r}
+BMI <- function(height, weight) {
+  x <- weight / (height^2)
+  return(x)
+}
+# Try calculating your own BMI
+BMI(height = 1.60, weight = 60)
+```
+
+Now write a function to calculate your body surface area.
+
+Where, BSA = $$\sqrt{(weight(kg)* height(cm))/3600}$$
+
+Then test your function.
+
+```{r}
+BSA <- function(height, weight) {
+  x <- sqrt((weight * height) / 3600)
+  return(x)
+}
+
+BSA(height = 175, weight = 80)
+```
+
+\newpage
+
+# Workshop 6 - Basic Statistics (deprecated)
+
+This workshop has been deprecated as of November 2020 and is not taught as part of the course, however the materials are kept here for reference. The reason for this is to cover more of the programming fundamentals during the course, rather than the applied statistics (which can vary greatly in their utility for each project). To meet this goal, we have added a new workshop "Control flow and looping" to replace this one. 
 
 ## Introduction
 
@@ -1813,55 +1868,3 @@ wilcox.test(los_num ~ sex, data = cchic)
 ```
 
 \newpage
-
-# Workshop 7 - Writing functions
-
-## Introduction
-
-Up to this point, we have been using functions written by others. We can also write our own functions to carry out operations we need to compute frequently.
-
-<p>
-![](Images/WriteFunction.png)
-<p>
-
-## Write a function
-
-Try writing this function for yourself. 
-
-```{r}
-say_hello <- function(name) {
-  message <- paste("Hello", name)
-  return(message)
-}
-
-say_hello("cheryl")
-```
-
-Use this function with your own name.
-
-Let's try writing another function.
-
-```{r}
-BMI <- function(height, weight) {
-  x <- weight / (height^2)
-  return(x)
-}
-# Try calculating your own BMI
-BMI(height = 1.60, weight = 60)
-```
-
-Now write a function to calculate your body surface area.
-
-Where, BSA = $$\sqrt{(weight(kg)* height(cm))/3600}$$
-
-Then test your function.
-
-```{r}
-BSA <- function(height, weight) {
-  x <- sqrt((weight * height) / 3600)
-  return(x)
-}
-
-BSA(height = 175, weight = 80)
-```
-
