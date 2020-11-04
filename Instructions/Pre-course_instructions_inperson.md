@@ -1,10 +1,10 @@
 # Pre-requisites for Clinician Coders.
 
-Clinician Coders teaching is hands-on, so participants need to bring their own laptops to ensure the proper setup of tools for an efficient workflow. In exchange, you will leave with a working version of R, and the skills to use it.
+Clinician Coders teaching is hands-on, so participants need access to laptops to ensure the proper setup of tools for an efficient workflow. In exchange, you will leave with a working version of R, and the skills to use it.
 
-This course assumes no prior knowledge of the tools, but working through the course requires working copies of the software described below. We recommend you install the programmes below before the course begins. 
+This course assumes no prior knowledge of the tools, but working through the course requires working copies of the software described below. We ask that you install the programs below before the course begins. 
 
-Please note all of the requirements specified below are free. Get in contact if you are about to hand over any money when setting up the pre-requisites, because you shouldn't be.
+Please note all of the programs specified below are free. Get in contact if you are about to hand over any money when setting up the pre-requisites, because you shouldn't be.
 
 ## Pre-course Objectives
 
@@ -12,7 +12,7 @@ Please note all of the requirements specified below are free. Get in contact if 
 
 - Install R studio
 
-- Download and install a speadsheet programme
+- Download and install a speadsheet program
 
 - Join Slack (To remove?)
 

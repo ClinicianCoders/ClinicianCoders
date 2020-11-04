@@ -1,4 +1,4 @@
-## Instructions for Clinician Coders Facilitators
+# Instructions for Clinician Coders Facilitators
 
 Thank you for agreeing to facilitate in the Clinician Coders course. We hope you will find this experience rewarding.  
   
@@ -7,129 +7,123 @@ This is a guide to help you understand the structure of the day. We hope that to
 
 <https://github.com/datascibc/ClinicianCoders>
 
-### Structure of the Course
+## Structure of the Course
 
 - The course is made up of a total of 7 workshops given across 4 afternoon
 - 6 of these consist of a set of slides
-- 2 of these (workshop 2 and 7) are *hands on* sessions for the candidates
+- 2 of these (workshop 2 and 7) are *hands on* sessions for the participants
     - Here your role as facilitator will be slightly different
-    - You will be supporting candidates on an individual basis with their queries as they work through problems
+    - You will be supporting participants on an individual basis with their queries as they work through problems
 - For each workshop there will be 3 Facilitators
     - 1 Lead Facilitator, who will also be co-ordinating and presenting that workshop contents
     - 2 Assistant Facilitators
 - The Lead Facilitator could be the same person for the 2 days, different on each day or they may alternate on a single day
 - You should have been told in advance what your role will be
 
-### Course Schedule
+## Course Schedule
 
-#### Day 1
+### Day 1
 
-13:00 - 13:30:   Start and Welcome
+13:00 - 13:30: Start and Welcome
 
-13:30 - 14:30:   Workshop 1: Introduction to R
+13:30 - 15:00: Workshop 1: Introduction to R
 
-14:30 - 15:00:   Coffee Break
+15:00 - 15:15: Coffee Break
 
-15:00 - 16:00:   Workshop 2: Cleaning your Dataset
+15:15 - 16:00: Workshop 2: Cleaning your Dataset
 
-#### Day 2
+### Day 2
 
-13:00 - 14:15:   Workshop 3: Getting your Data into R
+13:00 - 14:15: Workshop 3: Getting your Data into R 
 
-14:15 - 14:45:   Coffee Break
+14:15 - 14:30: Coffee Break
 
-14:45 - 16:00:   Workshop 4: Data Wrangling
+14:30 - 16:45: Workshop 4: Data Wrangling 
 
-#### Day 3
+### Day 3
 
 13:00 - 14:30: Workshop 5: Data visualization
 
-14:30 - 15:00: Coffee break
+14:30 - 14:45: Coffee break
 
-15:00 - 16:00: Workshop 7: Control flow and looping (part 1)
+14:45 - 16:00: Workshop 7: Control flow and looping (part 1)
 
-#### Day 4
+### Day 4
 
-13:00 - 14:00: Workshop 7: Control flow and looping (part 2)
+13:00 - 13:45: Workshop 7: Control flow and looping (part 2)
 
-14:00 - 14:30: Coffee break
+13:45 - 14:00: Coffee break
 
-14:15 - 16:00: Workshop 8: Using your own data (STRUCTURE TBA)
+14:00 - 16:00: Workshop 8: Using your own data (STRUCTURE TBA)
 
-## General tips.
+# General tips 
 
 Note that the all of the powerpoint slides have speaker notes embedded in them. Instructors will be able to view these if they change their powerpoint view to 'presenter view' while speaking.
 
-Share all files via Slack. Candidates should then be able to download them onto their own computer. 
-
-Also note that the slides and handout are built using a synthetic version of the CCHIC dataset. The CCHIC dataset is a Critical Care collaboration across trusts. Candidates can use this synthetic version to practice during the course.  
+Also note that the slides and handout are built using a synthetic version of the CCHIC dataset. The CCHIC dataset is a Critical Care collaboration across trusts. Participants can use this synthetic version to practice during the course.  
 
 The Github repository will have 3 datasets on it:
 1) A messy spread sheet version of the synthetic CCHIC database for workshop 2
 2) A cleaner verions of the synthetic CCHIC database in .csv format
-3) Readily wrangled synthetic CCHIC database, in case any candidates were no present, or lost their work from Day 1 
+3) Readily wrangled synthetic CCHIC database, in case any participants were no present, or lost their work from Workshop 4
 
-These files should be uploaded onto the slack channel so that candidates can easily access them. 
+## Specific to in-person format
+- If the course is delivered in-person and onsite, a Slack channel will be created for participants of the course. 
+- Share all files via Slack. Participants should then be able to download them onto their own computer. 
+- These files should be uploaded onto the slack channel so that participants can easily access them. 
+- Consider using a 'red sticker, green sticker' method of checking which participants need help. Give each participant a red and green post it note, and ask them to put the green sticker up when they have completed a task, and a red one up if they need help. 
 
-Consider using a 'red sticker, green sticker' method of checking which candidates need help. Give each candidate a red and green post it note, and ask them to put the green sticker up when they have completed a task, and a red one up if they need help. 
+## Specific to online format
+- If the course is delivered online, files will be shared via MS Teams.
+- Consider setting up 1-2 breakout rooms, in addition to the main seminar room. Any participants with an issue specific to them that is urgent and requires on-the-spot assistance can be directed to a breakout room, wherein an assistant facilitator can provide "one-to-one" assistance.
 
-### Tips on individual workshops.
+# Tips on individual workshops.
 
-#### The welcome slides
+### The welcome slides
 
-The instructor needs to make sure that each candidate has met the prerequisites. Feel free to pause and help candidates out.
+- The instructor needs to make sure that each participant has met the prerequisites. Feel free to pause and help participants out.
+- A note on the datasets for workshop 7. Participants can either bring their own data, and work with it in R, or they can use the synthetic CCHIC dataset. 
+- At the end of this, upload the pdf document of the handout to Slack/Teams so that participants can access it throughout the course. 
 
-A note on the datasets for workshop 8. Candidates can either bring their own data, and work with it in R, or they can use the synthetic CCHIC dataset. 
+### Workshop 1 
 
-At the end of this, upload the pdf document of the handout to the slack channel so that candidates can access it throughout the course. 
+- Just consists of the slides. 
 
-#### Workshop 1 
+### Workshop 2
 
-Just consists of the slides. 
+> The workshop aims to demonstrate the principles of tidy data. 
 
-#### Workshop 2
+- There are a set of slides to get participants started, but this is primarily a *hands-on* session for the participants.
+- Once introduced to tidy/messy data, participants navigate to the 'Workshop 2' section of the handout, read it and use the section entitled "Common Mistakes to Avoid and Correct" as inspiration for there data tidying. 
+- A 'dirty' version of the cchic dataset is provided, as well as a clean one. 
+- Instructors should upload the file called `dirty_CCHIC.xlsx` to Slack/Teams, get the participants to download it, open it in their spreadsheet application, and apply the principles described in the handout to clean it up. 
+- **In-person format:** It may be helpful for instructors to split the participants into small groups of 3-5 people each, and get each group to fix a particular problem with the csv file. The groups then discuss the changes they made. 
+- **Online format:** If 2 breakout rooms formed, it may still be possible to split participants into small groups of 3-5 each, as with the in-person format.
 
-There are a set of slides to get candidates started, but this is primarily a *hands-on* session for the candidates.
-Once introduced to tidy/messy data, candidates navigate to the 'Workshop 2' section of the handout, read it and use the section entitled "Common Mistakes to Avoid and Correct" as inspiration for there data tidying. 
+### Workshop 3
 
-The workshop aims to demonstrate the principles of tidy data. 
+- Just the slides. 
+- Share the file called `clean_CCHIC.csv` on Slack/Teams. Aim to read in the `.csv` file and have a dataframe called `cchic` in each participants R environment by the time the workshop is over. 
 
-A 'dirty' version of the cchic dataset is provided, as well as a clean one. 
+### Workshop 4
 
-Instructors should upload the file called `dirty_CCHIC.xlsx` to Slack, get the candidates to download it, open it in their spreadsheet application, and apply the principles described in the handout to clean it up. 
+- This includes both the slides and an additional R script. The instructor presents the slides, and the participants can follow along using the R script. Alternatively, they can type as they go along. 
+- Remind the participants that they will need the variables created in this session on the next day. This means that their `cchic` dataframe needs to contain a `los` variable. 
 
-It may be helpful for instructors to split the candidates into small groups of 3-5 people each, and get each group to fix a particular problem with the csv file. The groups then discuss the changes they made.
+### Workshop 5
 
-#### Workshop 3
+- Remind participants to load the same R object they created the day before. This cchic object should include the `los` variable. Allow a bit of time to make sure everyone has the dataset in their environment before demonstrating `ggplot` functions. 
+- The workshop includes both the slides and the R script. At one point in the slides, participants will be asked to open up the R script, and work through those examples. The R script should help them get a better idea of how small changes in the code can build on the same base graph. 
 
-Just the slides. 
-Share the file called `clean_CCHIC.csv` on Slack. Aim to read in the csv file and have a dataframe called `cchic` in each candidates R environment by the time the workshop is over. 
+### Workshop 6
 
-#### Workshop 4
+- Just consists of the slides.
 
-This includes both the slides and an additional R script. The instructor presents the slides, and the candidates can follow along using the R script. Alternatively, they can type as they go along. 
+### Workshop 7
 
-Remind the candidates that they will need the variables created in this session on the next day. This means that their `cchic` dataframe needs to contain a `los` variable. 
-
-#### Workshop 5
-
-Remind candidates to load the same R object they created the day before. This cchic object should include the `los` variable. Allow a bit of time to make sure everyone has the dataset in their environment before demonstrating `ggplot` functions. 
-
-The workshop includes both the slides and the R script. At one point in the slides, candidates will be asked to open up the R script, and work through those examples. The R script should help them get a better idea of how small changes in the code can build on the same base graph. 
-
-#### Workshop 6
-
-Just consists of the slides.
-
-#### Workshop 7
-
-
-
-#### Workshop 8
-
-Includes an R script which is just a template for working in R and analysing data generally. Upload to the slack channel at the beginning, and let candidates look through it in their own time.
-
-Allow candidates to work with their own data. Just go around providing assistance as required. If candidates have not brought in their own data, give them the opportunity to answer questions they may be interested in using the synthetic CCHIC dataset. 
-
+- Includes an R script which is just a template for working in R and analysing data generally. Upload to the Slack/Teams at the beginning, and let participants look through it in their own time.
+- If participants have not brought in their own data, give them the opportunity to answer questions they may be interested in using the synthetic CCHIC dataset. 
+- **In-person format:** Allow participants to work with their own data. Just go around providing assistance as required. 
+- **Online format:** On Day 1, ask participants to summarise their goals for their own data in one “attainable" aim. This will be given to facilitators at the end of Day 3. Thereafter, facilitators will go through goals and attempt to group participants into those with similar goals. As a minimum, aim to group participants into ~3 groups of 3-5 people. Then, facilitators will go around these groups (one breakout room per group) during the data session and try to help where needed.
 
 Thank you, and good luck!
