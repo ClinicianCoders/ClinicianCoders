@@ -53,17 +53,26 @@ cchic <- cchic %>%
 
 ## Load dplyr
 
-```{r, eval=FALSE}
-# You only need to install the package once.
-install.packages("dplyr")
 
+- `dplyr` is a package containing functions to help manipulate data.   
+- It is automatically installed with `tidyverse`.
+- As we have already installed `tidyverse`, we simply need to load the package.
+
+```{r, eval=FALSE}
 # You need to load the package each time you open R.
-library(dplyr)
+library(tidyverse)
 ```
 
 ## Load data
 
-Load data from the file you created earlier. The data frame should be called `cchic`
+
+From the previous workshop, you should still have a data frame named `cchic` in your environment.
+If not, please load it again.
+
+## Two concepts you need to know before using dplyr
+
+- The pipe
+- Logical operators
 
 ## The pipe 
 
@@ -123,11 +132,7 @@ It should return a logical vector. This can then be used to filter your vector.
 test_age[test_age >= 65]
 ```
 
-::: notes
-For instance, when you are selecting something
-:::
-
-## Filter
+## filter()
 
 Choose rows based on the conditions you specify.
 
@@ -142,7 +147,7 @@ The output is a data frame where all patients are 65 years or older.
 Dplyr works using 'verbs'. The first one is `filter`.
 :::
 
-## Select
+## select()
 
 Allows you to choose specific variables from your dataset.
 
@@ -157,7 +162,7 @@ Output is a data frame with the gender of all patients.
 The second verb is select.
 :::
 
-## Using filter and select together
+## Using filter() and select() together
 
 ```{r, eval = FALSE}
 cchic %>%
@@ -167,9 +172,13 @@ cchic %>%
 
 Output is the gender of patients who are 65 years or older.
 
-What happens if you do `select()` and then `filter()`? 
+**Question**:What happens if you do `select()` and then `filter()`? 
 
-You have removed the age variable from the dataset, so you can’t filter based on age.
+## Using filter() and select() together
+
+**Question**:What happens if you do `select()` and then `filter()`? 
+
+*You have removed the age variable from the dataset, so you can’t filter based on age.*
 
 ## Piped data with functions
 
@@ -184,26 +193,25 @@ cchic %>%
 
 Gives information on gender for patients older than 65.
 
-
 ## Other dplyr wrangling verbs
 
 - `group_by()`
 - `summarise()`
 
 
-## Example of using group by and summarise
+## Exercise: Using group_by() and summarise()
 
-Try this.
+**Try this.**
 ```{r, eval = FALSE}
 cchic %>%
   dplyr::group_by(sex) %>%
   dplyr::summarise(mean_urea = mean(urea))
 ```
 
-What is the output?
-Hint – check for missing values in `cchic$urea`. You made need to add an additional argument in the function `mean`, which removes missing values. 
+- What is the output?
+- Hint – check for missing values in `cchic$urea`. You made need to add an additional argument in the function `mean`, which removes missing values. 
 
-## Make it work
+## Solution: Using group_by() and summarise()
 
 ```{r}
 cchic %>%
@@ -250,7 +258,7 @@ cchic <- cchic %>%
 
 ## 2. Create a new variable
 
-Use the `mutate` function 
+Use the `mutate()` function 
 
 ```{r, eval = FALSE}
 cchic <- cchic %>%
@@ -310,7 +318,7 @@ test_dates
 ```
 
 
-## Parsing dates
+## 5. Working with dates - parsing dates
 
 We can extract components of dates. 
 
@@ -332,7 +340,7 @@ cchic <- cchic %>%
 str(cchic$discharge_day)
 ```
 
-## Date intervals
+## 5. Working with dates - date intervals
 
 We often want to calculate the difference between two dates or times.
 Let's calculate the length of stay of patients admitted to the ICU.
@@ -360,10 +368,8 @@ Warn them that this concept takes a while to grasp.
 
 ## Converting the data
 
+**Try this.**
 ```{r, eval = FALSE}
-library(tidyr)
-cchic
-
 cchic_long <- cchic %>%
   tidyr::gather(key = "temp_point", 
                 value = "temperature", 
@@ -372,10 +378,9 @@ cchic_long <- cchic %>%
 names(cchic_long)
 ```
 
-## This is why we 'gathered' the data
+## Plotting the gathered data
 
 ```{r, eval = FALSE}
-library(ggplot2)
 cchic_long %>%
   ggplot(aes(
     x = temp_point, y =

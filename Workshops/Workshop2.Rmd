@@ -29,7 +29,7 @@ Each variable has it's own column. Each observation has its own row. And finally
 
 ## Exercise
 
-1. In groups, identify messy aspects of the data
+1. Identify messy aspects of the data.
     - Hint: "Common Mistakes to Avoid and Correct" in the handout can provide some inspiration.
 2. How would you tidy this? Break down your strategy into individual steps.
 3. If you finish early, use the `dplyr` and `stringr` cheat sheets to start identifying appropriate `R` functions.

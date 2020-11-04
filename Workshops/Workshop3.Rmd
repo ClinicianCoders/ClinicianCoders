@@ -19,7 +19,7 @@ cchic <- read_csv("../clean_CCHIC.csv")
 
 ## What will this workshop teach you?
 
-1.  Getting `csv` files into R.  
+1.  Getting `.csv` files into R.  
 2.  Initial exploration of your data set.  
 \newparagraph
 
@@ -47,10 +47,10 @@ The handout also includes some tips on importing data from Google Sheets.
 ## Time Out
 ::::::::::::{.columns}
 :::{.column}
-- Take a moment to download the practise data set.
-- Available in `csv` format:   
+- Take a moment to download the practice data set.
+- Available in `.csv` format:   
 
-  - `clean_CCHIC` from the slack channel  
+  - `clean_CCHIC` 
   
   - Open and `Save As` a `.csv` file
 
@@ -59,6 +59,10 @@ The handout also includes some tips on importing data from Google Sheets.
 ![](../Images/SaveAsCSV.png)
 :::
 :::::::::::: 
+
+::: notes
+Upload file to MS Teams/Slack.
+:::
 
 ## Files, directories and file paths
 - R can not read your data if it does not know where it is stored.
@@ -88,14 +92,14 @@ The handout also includes some tips on importing data from Google Sheets.
 :::{.column}
 - R will have chosen a working directory for you.  
 
-```{r, eval=FALSE}
+```{r, eval = F}
 getwd()
 ```
 
 - Will display your working directory in your console.  
 - You can then reset it to your desired working directory using. 
 
-```{r, eval=FALSE}
+```{r, eval = F}
 setwd()
 ```
 :::
@@ -133,7 +137,7 @@ Click `Import Dataset` tab in the `Environment` pane
 
 :::
 :::{.column}
-![](../Images/Point and click.png)
+![](../Images/Pointandclick.png)
 :::
 ::::::::::::
 
@@ -176,7 +180,7 @@ Click `Import Dataset` tab in the `Environment` pane
 - It is automatically installed with `tidyverse`  
 - Install and load the package as follows  
 
-```{r, eval=FALSE}
+```{r, eval = F}
 install.packages("tidyverse")
 library(tidyverse)
 ```
@@ -185,14 +189,14 @@ library(tidyverse)
 
 - You can then tell R to read a CSV file by writing the full file path name. This is an example file path, but what you need to type depends on where you stored the data on your computer. 
 
-```{r, eval=FALSE}
+```{r, eval = F}
 # You are saving your data in an object called "cchic"
-cchic <- read_csv("C:/Users/rhrey/OneDrive - University College London/PhD/Teaching/ClinicianCoders_wd/ClinicianCoders/clean_CCHIC.csv")
+cchic <- read_csv("C:/Users/rhrey/OneDrive - University College London/ClinicianCoders_wd/ClinicianCoders/clean_CCHIC.csv")
 ```
 
 - Display the contents of the data frame `cchic`.
 
-```{r, eval = FALSE}
+```{r, eval = F}
 cchic
 ```
 
@@ -210,7 +214,7 @@ Get them to do this
 - You have imported your data into R.
 - You need a neat way of looking at it. 
 
-```{r, eval=FALSE}
+```{r, eval = F}
 View(cchic)
 ```
 
@@ -227,11 +231,10 @@ View(cchic)
 
 - There are notations to shorten the code for the file path.  
 - Use single dot for a file within current working directory.
-```{r, eval=FALSE}
+- Use double dot `..` for a file in the directory above the current working directory.
+```{r, eval = F}
 read_csv("../clean_CCHIC.csv")
 ```
-
-- Use double dot ".." for a file in the directory above the current working directory.
 
 ## Reviewing your data in R
 
@@ -246,7 +249,7 @@ You can use these functions to investigate your data frame:
       
 ## head()
 
-```{r, eval=FALSE}
+```{r, eval = F}
 head(cchic)
 ```
 
@@ -254,7 +257,7 @@ Prints the first 6 rows of the data frame.
 
 ## tail()
 
-```{r, eval=FALSE}
+```{r, eval = F}
 tail(cchic)
 ```
 
@@ -262,7 +265,7 @@ Prints the last 6 rows of the data frame.
 
 ## names()
 
-```{r, eval=FALSE}
+```{r, eval = F}
 names(cchic)
 ```
 
@@ -270,7 +273,7 @@ Prints the names of the variables.
 
 ## class()
 
-```{r, eval=FALSE}
+```{r, eval = F}
 class(cchic)
 ```
 Prints the class of the object `cchic`.
@@ -298,7 +301,7 @@ This displays the the piece of data in the 21st row and 5th column.
 - You can also use the `$` function.
 - Enter `data_frame_name$variable_name`
 
-```{r, eval=FALSE}
+```{r, eval = F}
 cchic$weight
 ```
 
@@ -306,14 +309,14 @@ cchic$weight
 
 ## Other tools to review data
 
-- Specific functions from special packages help you describe the whole data set
+- Specific functions from special packages help you describe the whole data set.
 - The function will look at each variable and will give you basic measures about the data, for example range and mean.
 - The data will also be described in a number of plots.
   - `Desc()` from `DescTools` package
   - `describe()` from `Hmisc` package  
-- To use these you have to install the appropriate packages
+- To use these you have to install the appropriate packages.
 
-```{r, echo = F, eval=FALSE}
+```{r, echo = F, eval = F}
 DescTools::Desc(cchic)
 Hmisc::describe(cchic)
 ```
@@ -333,13 +336,13 @@ Let them explore these if you have time.
 ## Answer 1.
 What types of variables do you have in `cchic`?
 
-```{r, eval=FALSE}
+```{r, eval = F}
 str(cchic)
 ```
 
 ## Answer 2
 Display the `discharge_dttm` vector in `cchic`.
-```{r, eval = FALSE}
+```{r, eval = F}
 cchic$discharge_dttm
 ```
 
@@ -362,5 +365,3 @@ ls(cchic, pattern = "temp")
 ```
 
 This lists all of the variables in `cchic` containing the word "temp".
-
-# Time for lunch!

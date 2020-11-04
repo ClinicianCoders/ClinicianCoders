@@ -4,6 +4,7 @@ title: "Introduction to R"
 output: 
   powerpoint_presentation:
     reference_doc: ../Images/template.pptx
+    
 
 ---
 
@@ -18,7 +19,7 @@ output:
     - [R Cheatsheets](https://rstudio.com/resources/cheatsheets/)
     - Stack Overflow
     - [Hadley Wickham's R for Data Science](https://r4ds.had.co.nz/)
-- Initially collated by members of the [DataSciBC](www.datascibc.org)
+- Initially collated by members of the [DataSciBC](http://datascibc.org/)
 
 
 ## Content
@@ -81,7 +82,7 @@ Taken from https://r4ds.had.co.nz/introduction.html
 - Easier to work with than R on it's own, since it it a bit more 'point and clicky'
 - Allows
     - Code editing
-    - Syntax highlighting
+    - Syntax highlighting (i.e. highlighting of different sub-elements of syntax such as comments, control-flow statements, variables, etc.)
     - Plotting tools
     - Workspace management 
 
@@ -166,12 +167,12 @@ Say that the ## sign is just printed on the slide as an indicator that we are se
     - Save the file under a meaningful name. 
     - Save it somewhere you can find it again.
     - .R is the file extension for R scripts.
-- Close the Source window
-- Close R Studio
-- Restart R Studio and click the `open` icon
-- Find your file and open
-- Your code still there
-- You can run it again
+- Close the Source window.
+- Close R Studio.
+- Restart R Studio and click the `open` icon.
+- Find your file and open.
+- Your code should still be there.
+- You can run it again.
 
 ::: notes
 
@@ -195,19 +196,25 @@ See
     - Lists
 - Functions
     - Stored in packages
+    
+::: notes
+
+In this course, we will primarily be using vectors and data frames.
+
+:::
 
 ## 3 main building blocks
 
-- Object names
+1. Object names
     - Everything needs a name in R: tables, plots, data files, functions 
-- Data
+2. Data
     - Data comes in different classes: 
         - Real numbers - `numeric`
         - Discrete numbers - `integer`
         - Characters - `character`
     - Data can be stored in vectors
     - Vectors can be stored in data frames
-- Functions
+3. Functions
     - Little factories
     - Take an input (raw material) use function (factory) get an output (product)
     - Functions are collated into packages
@@ -254,7 +261,7 @@ say hello <- "hello"
 
 ## Vectors
 
-- A vector contains elements of the same datatype.
+- A vector contains elements of the same data type.
     - A vector of integers - an example would be age
     ```{r, echo = FALSE}
 c(50, 25, 32, 67, 46, 19, 48)
@@ -304,6 +311,56 @@ age[4]
 name[5]
 ```
 
+## Exercise: Vectors - other properties
+
+- Remember, vectors contain elements of the same data type.
+- Thus, what would happen if we were to add a value of `TRUE` to a vector of integers?
+- Use `class()` to examine the class of the vector. What has happened?
+
+```{r}
+# Add a value of TRUE to a vector of integers 
+test <- c(1, 2, 3, 4, TRUE)
+
+```
+
+## Solution: Vectors - other properties
+```{r}
+
+# Recall the vector
+test
+
+# Examine the class of the vector
+class(test)
+
+```
+
+- The value of `TRUE` has been changed to 1.
+- The vector is still a numeric vector.
+- This is because logical vectors (i.e. `TRUE`/`FALSE`) can be coded in a binary format (1/0).
+
+## Exercise: Vectors - other properties
+- Add a character variable to a vector of integers.
+
+```{r}
+test2 <- c(1, 2, 3, 4, "hi")
+```
+
+- Recall the vector and use `class()` to examine the class of the vector. What has happened?
+
+## Solution: Vectors - other properties
+
+```{r}
+# Recall the vector
+test2
+
+# Examine the class of the vector
+class(test2)
+
+```
+
+- The character variable has been added on to the end of the vector.
+- The vector is now a character vector.
+
 ## Data frames
 - You are already familiar with data frames
 
@@ -316,7 +373,7 @@ data.frame(name, age, gender)
 - Each vector becomes a column in the table
 - A properly formatted excel spreadsheet is essentially a data frame
 
-## Creating a data frame - exercise
+## Exercise: Creating a data frame 
 
 - Create and name vectors containing information about these 6 patients.
     - `Name: "Adam", "Sally", "Eve", "John", "James", "Jennifer"`
@@ -327,14 +384,13 @@ data.frame(name, age, gender)
     - Characters on the left side of the assignment operator. No quote marks.
     - Characters on the right side of the assignment operator. Use quote marks if storing letters.
 
-## Creating a data frame - exercise
+## Exercise: Creating a data frame
 - Combine these vectors into a data frame using `data.frame()`.
     - Hint, the vector names need to go inside the `()`.
 - Save the data frame under the name `patients`.
 - Print the data frame called `patients` to your console.
 
-## Creating a data frame - solution
-
+## Solution: Creating a data frame
 
 ```{r}
 # Creating individual vectors.
@@ -349,7 +405,7 @@ gender <- c("male", "female", "female", "male", "male", "female")
 patients <- data.frame(name, age, gender)
 ```
 
-## This is the data frame
+## Solution: Creating a data frame
 ```{r}
 patients
 ```
@@ -365,43 +421,6 @@ patients
 ```{r}
 patients$age
 ```
-
-## Vectors - other properties
-- Add a value of TRUE to a vector of integers.
-- Give it a name.
-- Recall the vector.
-- Use `str()`/`class()` to examine the structure of the vector.
-- What has happened?
-
-## Vectors - other properties
-
-```{r}
-test <- c(1, 2, 3, 4, TRUE)
-test
-str(test)
-class(test)
-```
-
-- The value of `TRUE` has been changed to 1.
-- The vector is still a numeric vector
-
-## Vectors - other properties
-- Add a character variable to a vector of integers
-- Recall the vector
-- What has happened?
-
-## Vectors - other properties
-
-```{r}
-test2 <- c(1, 2, 3, 4, "hi")
-test2
-class(test2)
-str(test2)
-```
-
-
-- The character variable has been added on to the end of the vector.
-- The vector is now a character vector.
 
 ## Functions as factories
 ![](../Images/Function1.png)
