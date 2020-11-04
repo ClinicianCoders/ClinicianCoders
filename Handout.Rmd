@@ -127,7 +127,7 @@ say_hello
 
 ### 2. Data
 
-R is a statistical computing language; statistics uses vectors, matrices and dataframes. 
+R is a statistical computing language; statistics uses vectors, matrices and data frames. 
 
 #### *Vector*
 
@@ -1289,7 +1289,7 @@ These graphs give you a good idea of how the data is distributed.
 - Histograms for continuous variables
     - Be mindful of the number of bins you choose; too many and you lose the ‘signal’ and too few and you can’t appreciate the ‘signal’.
     - Can also be used to approximate distributions
-- Scatterplots can reveal outliers that may not be obvious from looking at the dataframe. 
+- Scatterplots can reveal outliers that may not be obvious from looking at the data frame. 
 
 ### 2. Storytelling
 
@@ -1494,7 +1494,7 @@ There are many different resources advising you on how to present your data (inc
 
 ## Introduction
 
-Two core principles that sit behind any programming language such as `R` are the use of control flow and loops. Control flow allows you to flexibly change what you code does depending on whether a condition is met and loops allow you to execute code across many iterations. Together, these allow you to easily perform complex tasks tailored to your input, any number of times you need. 
+Two core principles that sit behind any programming language such as `R` are the use of control flow and loops. Control flow allows you to flexibly change what your code does depending on whether a condition is met, while loops allow you to execute code across many iterations. Together, these allow you to easily perform complex tasks tailored to your input, any number of times you need. 
 
 ## Control flow
 
@@ -1502,7 +1502,7 @@ In practice, control flow is often executed through `if` statements. A simple ex
 
 ```{r example_if, eval = FALSE}
 
-# can be read is if condition_a is met
+# can be read as, if condition_a is met
 # then do_something
 if(condition_a){
   
@@ -1531,7 +1531,7 @@ if(weather == "rain"){
 
 ```
 
-In the above, we create an example `weather` vector storing a string labeling the weather. The condition here is `weather == "rain"`, which will be evaluated into TRUE **only** if the `weather` vector matches "rain". In this case it does, which is why you see the "bring an umbrella!" printed, as it the section inbetween the `{}` is evaluated. 
+In the above, we create an example `weather` vector storing a string labeling the weather. The condition here is `weather == "rain"`, which will be evaluated into TRUE **only** if the `weather` vector matches "rain". In this case it does, which is why you see the "bring an umbrella!" printed, as the section in between the `{}` is evaluated. 
 
 We can add multiple conditions using the `else if` syntax. For example if we wanted to categorise heights into "tall" and "short". 
 
@@ -1593,7 +1593,7 @@ dplyr::mutate(df, height_cat = ifelse(test = height > 190, yes = "tall", no = "n
 ```
 ## Loops 
 
-Loops are fundamental to any code. In reality, you've actually called many functions that have used loops behind the scenes already. Just, they are hidden by `R` or whoever designed to function, to make that function faster or more user friendly.
+Loops are fundamental to any code. In reality, you've actually called many functions that have used loops behind the scenes already. Just, they are hidden by `R` or whoever designed the function, to make that function faster or more user friendly.
 
 Let's start again with an example of a simple loop. 
 
@@ -1609,8 +1609,8 @@ for(i in 1:5){
 
 A loop has 3 components: 
 
-1. `1:5` - a vector. This can be any object that permits iteration but one of the simplest use cases is an integer vector shown. The loop will be iterating across this vector. The number of iterations of the loop is determined by the length of this vector and the value of `i` is determined by the contents of this vector. 
-2. `i` - an index/iterator. This takes on the `i`th value of the vector at each iteration. E.g. in iteration 1, it's value takes on the 1st value of `1:5`. On iteration 2, the second value etc..  
+1. `1:5` - a vector. This can be any object that permits iteration, but one of the simplest use cases is an integer vector shown. The loop will be iterating across this vector. The number of iterations of the loop is determined by the length of this vector and the value of `i` is determined by the contents of this vector. 
+2. `i` - an index/iterator. This takes on the `i`th value of the vector at each iteration. E.g. in iteration 1, it's value takes on the 1st value of `1:5`. On iteration 2, the second value etc.  
 3. `print(i)` - the contents of the loop. This can be any code you wish. For demonstration, this code prints the `i`. 
 
 You can also loop across other vector types. 
@@ -1627,7 +1627,7 @@ for(a in animals){
 
 ```
 
-As the length of the `animals` vector is 4, the loop here has 4 iterations. During each iteration, a takes on the value of the vector `animals` at the position matching the iteration. Hence, why print `a` prints the 4 animals in the order they appear in the vector.
+As the length of the `animals` vector is 4, the loop here has 4 iterations. During each iteration, `a` takes on the value of the vector `animals` at the position matching the iteration. Hence, why print `a` prints the 4 animals in the order they appear in the vector.
 
 ```{r example_loop03}
 
@@ -1644,9 +1644,11 @@ for(i in seq_along(animals)){
 
 In this case, we've used the function `seq_along` to convert `animals` into an index vector. Then `i` becomes the index of each value in `animals`. And `animals[i]` uses `i` to extract the value at that position in `animals`. 
 
+\newpage
+
 # Workshop 7 - Writing functions (deprecated)
 
-This workshop exists in the handout however is not covered during the Clinician Coders course since 2019. 
+This workshop has been deprecated as of Spring 2019 and is not taught as part of the course, however the materials are kept here for reference.
 
 ## Introduction
 
@@ -1805,7 +1807,7 @@ To help convey the impact of difference in standard deviation we ran the followi
 
 ```{r, fig.height=2, fig.width = 5}
 dummy_1 <- rnorm(1000, mean = 10, sd = 0.5)
-# ggplot only accepts dataframes.
+# ggplot only accepts data frames.
 dummy_1 <- as.data.frame(dummy_1)
 ggplot(dummy_1, aes(x = dummy_1)) +
   geom_histogram()
