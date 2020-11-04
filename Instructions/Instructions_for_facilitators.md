@@ -9,15 +9,15 @@ This is a guide to help you understand the structure of the day. We hope that to
 
 ## Structure of the Course
 
-- The course is made up of a total of 7 workshops given across 4 afternoon
+- The course is made up of a total of 7 workshops given across 4 afternoons
 - 6 of these consist of a set of slides
 - 2 of these (workshop 2 and 7) are *hands on* sessions for the participants
-    - Here your role as facilitator will be slightly different
+    - Here, your role as facilitator will be slightly different
     - You will be supporting participants on an individual basis with their queries as they work through problems
-- For each workshop there will be 3 Facilitators
-    - 1 Lead Facilitator, who will also be co-ordinating and presenting that workshop contents
-    - 2 Assistant Facilitators
-- The Lead Facilitator could be the same person for the 2 days, different on each day or they may alternate on a single day
+- For each workshop there will be 3 facilitators
+    - 1 lead facilitator, who will also be co-ordinating and presenting that workshop's contents
+    - 2 assistant facilitators
+- The lead facilitator could be the same person for the 2 days, different on each day or they may alternate on a single day
 - You should have been told in advance what your role will be
 
 ## Course Schedule
@@ -62,7 +62,7 @@ Note that the all of the powerpoint slides have speaker notes embedded in them. 
 
 Also note that the slides and handout are built using a synthetic version of the CCHIC dataset. The CCHIC dataset is a Critical Care collaboration across trusts. Participants can use this synthetic version to practice during the course.  
 
-The Github repository will have 3 datasets on it:
+The GitHub repository will have 3 datasets on it:
 1) A messy spread sheet version of the synthetic CCHIC database for workshop 2
 2) A cleaner verions of the synthetic CCHIC database in .csv format
 3) Readily wrangled synthetic CCHIC database, in case any participants were no present, or lost their work from Workshop 4
@@ -117,7 +117,7 @@ The Github repository will have 3 datasets on it:
 
 ### Workshop 6
 
-- Just consists of the slides.
+- Just consists of the slides and an additional R script. The instructor presents the slides and the participants are expected to follow along using the R script, as well as answer the questions provided in the R script.  
 
 ### Workshop 7
 
