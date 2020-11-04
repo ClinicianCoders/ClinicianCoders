@@ -46,15 +46,15 @@ This is a guide to help you understand the structure of the day. We hope that to
 
 14:30 - 14:45: Coffee break
 
-14:45 - 16:00: Workshop 7: Control flow and looping (part 1)
+14:45 - 16:00: Workshop 6: Control flow and looping (part 1)
 
 ### Day 4
 
-13:00 - 13:45: Workshop 7: Control flow and looping (part 2)
+13:00 - 13:45: Workshop 6: Control flow and looping (part 2)
 
 13:45 - 14:00: Coffee break
 
-14:00 - 16:00: Workshop 8: Using your own data (STRUCTURE TBA)
+14:00 - 16:00: Workshop 7: Using your own data
 
 # General tips 
 

@@ -74,7 +74,7 @@ Due to the online format of the course, we have decided to classify questions in
 
 - **General questions related to current workshop.** If you have a general question/issue related to the slides/material, we ask that you *raise a virtual hand* and the lead facilitator will pause the presentation to answer.  
 - **Participant-specific questions/issues that are hindering ability to follow workshop.** If you have a question/issue that is hindering your ability to follow along with the workshop (e.g. coding error returned in RStudio), we ask that you *navigate to a break-out room* where a free assistant facilitator will help you.
-- **Participant-specific questions/issues that are hindering ability to follow workshop.** If you have a question that does not require immediate assistance (e.g. queries about exploring other packages that you may be interested in), we ask that you *post these in the Teams chat*. Facilitators will answer these in the breaks or during the workshop if they have time. 
+- **Participant-specific questions/issues that do not require immediate assistance.** If you have a question that does not require immediate assistance (e.g. queries about exploring other packages that you may be interested in), we ask that you *post these in the Teams chat*. Facilitators will answer these in the breaks or during the workshop if they have time. 
 
 This is the first time we will be delivering Clinician Coders in an online format, so thank you in advance for your patience!
 
