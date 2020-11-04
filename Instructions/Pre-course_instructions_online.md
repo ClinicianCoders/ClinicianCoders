@@ -1,6 +1,6 @@
 # Pre-requisites for Clinician Coders
 
-Clinician Coders teaching is hands-on, so participants need access to laptops to ensure the proper setup of tools for an efficient workflow. In exchange, you will leave with a working version of R, and the skills to use it.
+Clinician Coders teaching is hands-on, so participants need to have access to laptops and ensure they have a proper setup of tools for an efficient workflow. In exchange, you will leave with a working version of R, and the skills to use it.
 
 This course assumes no prior knowledge of the tools, but working through the course requires working copies of the software described below. We ask that you install the programs below before the course begins. 
 
@@ -10,7 +10,7 @@ This course assumes no prior knowledge of the tools, but working through the cou
 
 - Install R
 
-- Install R studio
+- Install RStudio
 
 - Download and install a speadsheet program
 
@@ -18,7 +18,7 @@ This course assumes no prior knowledge of the tools, but working through the cou
 
 ## Steps
 
-### 1. Install R and R studio
+### 1. Install R and RStudio
 
 We’re going to get you up and running in R which is a highly respected, free statistics package used by academics around the world. We will also install a friendly interface to R called RStudio.
 
