@@ -235,13 +235,6 @@ ggplot(data = cchic) +
 
 ```
 
-## Proportion instead of count
-
-```{r, eval = T, message=FALSE}
-ggplot(data = cchic) +
-  geom_bar(mapping = aes(x = vital_status, y = ..prop.., group = 1))
-```
-
 ## Adding a second aesthetic
 
 ```{r, eval = T, message=FALSE}
@@ -252,15 +245,23 @@ ggplot(data = cchic) +
 ## Standardising proportions
 
 ```{r, eval = T, message=FALSE}
-ggplot(data = cchic) +
-  geom_bar(mapping = aes(x = vital_status, fill = sex), position = "fill")
+
+sex_vit_prop <- cchic %>% 
+  group_by(vital_status, sex) %>% 
+  summarize(n = n()) %>% 
+  group_by(vital_status) %>% 
+  mutate(n_total = sum(n), 
+         prop = n/n_total)
+
+ggplot(data = sex_vit_prop) +
+  geom_col(mapping = aes(x = vital_status, y = prop, fill = sex))
 ```
 
 ## Changing position of bars
 
 ```{r, eval = T, message=FALSE}
-ggplot(data = cchic) +
-  geom_bar(mapping = aes(x = vital_status, fill = sex), position = "dodge")
+ggplot(data = sex_vit_prop) +
+  geom_col(mapping = aes(x = vital_status, y = prop, fill = sex), position = "dodge")
 ```
 
 ## Scales and themes
@@ -273,23 +274,50 @@ ggplot(data = cchic) +
 
 ```{r}
 
-ggplot(data = cchic) +
-  geom_bar(mapping = aes(x = vital_status, fill = sex), position = "dodge") + 
-  scale_x_discrete(name = "Survival", labels = c(1, 0))
+ggplot(data = sex_vit_prop) +
+  geom_col(mapping = aes(x = vital_status, y = prop, fill = sex), position = "dodge") + 
+  scale_x_discrete(name = "Survival", labels = c(1, 0)) 
 
 ```
 
+## Improving the y-axis labels
+
+```{r}
+
+ggplot(data = sex_vit_prop) +
+  geom_col(mapping = aes(x = vital_status, y = prop, fill = sex), position = "dodge") + 
+  scale_x_discrete(name = "Survival", labels = c(1, 0)) +
+  scale_y_continuous(name = "Proportion")
+
+```
+
+## Improving the colours
+
+```{r}
+
+ggplot(data = sex_vit_prop) +
+  geom_col(mapping = aes(x = vital_status, y = prop, fill = sex), position = "dodge") + 
+  scale_x_discrete(name = "Survival", labels = c(1, 0)) +
+  scale_y_continuous(name = "Proportion") + 
+  scale_fill_manual(name = "Gender", 
+                    values = ggpubr::get_palette("npg", 2), 
+                    labels = c("female", "male"))
+
+```
 ## Changing the overall theme
 
 ```{r}
 
-ggplot(data = cchic) +
-  geom_bar(mapping = aes(x = vital_status, fill = sex), position = "dodge") + 
-  scale_x_discrete(name = "Survival", labels = c(1, 0)) + 
+ggplot(data = sex_vit_prop) +
+  geom_col(mapping = aes(x = vital_status, y = prop, fill = sex), position = "dodge") + 
+  scale_x_discrete(name = "Survival", labels = c(1, 0)) +
+  scale_y_continuous(name = "Proportion") + 
+  scale_fill_manual(name = "Gender", 
+                    values = ggpubr::get_palette("npg", 2), 
+                    labels = c("female", "male")) + 
   theme_bw()
 
 ```
-
 ## Practice
 
 - Open up the R script called `Workshop5.R`.
