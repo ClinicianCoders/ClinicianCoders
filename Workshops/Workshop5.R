@@ -3,7 +3,7 @@ library(tidyverse)
 
 # Load data -------------------------------------------------------------------------------------------
 
-cchic <- read_csv("../clean_CCHIC.csv")
+cchic <- read_csv("clean_CCHIC.csv")
 
 # Main ------------------------------------------------------------------------------------------------
 
@@ -17,7 +17,7 @@ ggplot(data = cchic) +
 
 # What is the distribution of ages of the dataset
 ggplot(data = cchic) +
-  geom_histogram(mapping = aes(x = age_years)) 
+  geom_histogram(mapping = aes(x = age_years))
 
 ##### common ggplot2 syntax errors #####
 
@@ -28,12 +28,12 @@ ggplot(data = cchic) +
 ggplot(data = cchic) +
   geom_point(mapping = aes(x = height, y = weight), colour = sex)
 
-ggplot(data = cchic) %>% 
+ggplot(data = cchic) %>%
   geom_point(mapping = aes(x = height, y = weight, colour = sex))
 
 # why hasn't this printed? how would I display the plot?
-# why would I want to go this? 
-height_vs_weight_plot <- ggplot(data = cchic) + 
+# why would I want to go this?
+height_vs_weight_plot <- ggplot(data = cchic) +
   geom_point(mapping = aes(x = height, y = weight, colour = sex))
 
 # Save data -------------------------------------------------------------------------------------------
