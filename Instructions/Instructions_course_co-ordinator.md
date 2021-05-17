@@ -44,7 +44,11 @@
   - Participants must bring chargers for their laptops
   
 ### Online format
-- Set up event on MS Teams
+- Set up a Team on MS Teams, with the name "Clinician Coders <Month> <Year>". In this Team, there should be 3 channels:
+    1. General
+    2. Question Room 1
+    3. Question Room 2
+
 - Email participants document with "Pre-course Instructions"
 - This will include instructions on:
   - Downloading of R
