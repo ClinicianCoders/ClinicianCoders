@@ -49,16 +49,14 @@ Go through each item on list, make sure each person has completed all items. You
 - 14:15 - 14:30: Coffee Break
 - 14:30 - 16:45: Workshop 4: Data Wrangling 
 
-## Schedule - Day 3 & 4
+## Schedule - Day 3
 
 **Day 3**
 
-- 13:00 - 14:30: Workshop 5: Data visualization
-- 14:30 - 14:45: Coffee break
-- 14:45 - 16:00: Workshop 6: Control flow and looping (part 1)
-
-**Day 4**
-
+- 09:00 - 10:30: Workshop 5: Data visualization
+- 10:30 - 10:45: Coffee break
+- 10:45 - 12:00: Workshop 6: Control flow and looping (part 1)
+- 12:00 - 13:00: Lunch break
 - 13:00 - 13:45: Workshop 6: Control flow and looping (part 2)
 - 13:45 - 14:00: Coffee break
 - 14:00 - 16:00: Workshop 7: Using your own data

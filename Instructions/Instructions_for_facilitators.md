@@ -3,13 +3,11 @@
 Thank you for agreeing to facilitate in the Clinician Coders course. We hope you will find this experience rewarding.  
   
   
-This is a guide to help you understand the structure of the day. We hope that together with the access to the Github Repository you will be prepared for the course. 
-
-<https://github.com/datascibc/ClinicianCoders>
+This is a guide to help you understand the structure of the day. We hope that together with the access to the [Github Repository](https://github.com/datascibc/ClinicianCoders) you will be prepared for the course. 
 
 ## Structure of the Course
 
-- The course is made up of a total of 7 workshops given across 4 afternoons
+- The course is made up of a total of 7 workshops given across 2 afternoons and 1 full day
 - 6 of these consist of a set of slides
 - 2 of these (workshop 2 and 7) are *hands on* sessions for the participants
     - Here, your role as facilitator will be slightly different
@@ -17,7 +15,7 @@ This is a guide to help you understand the structure of the day. We hope that to
 - For each workshop there will be 3 facilitators
     - 1 lead facilitator, who will also be co-ordinating and presenting that workshop's contents
     - 2 assistant facilitators
-- The lead facilitator could be the same person for the 2 days, different on each day or they may alternate on a single day
+- The lead facilitator could be the same person across all course days, different on each day or they may alternate on a single day
 - You should have been told in advance what your role will be
 
 ## Course Schedule
@@ -42,13 +40,13 @@ This is a guide to help you understand the structure of the day. We hope that to
 
 ### Day 3
 
-13:00 - 14:30: Workshop 5: Data visualization
+09:00 - 10:30: Workshop 5: Data visualization
 
-14:30 - 14:45: Coffee break
+10:30 - 10:45: Coffee break
 
-14:45 - 16:00: Workshop 6: Control flow and looping (part 1)
+10:45 - 12:00: Workshop 6: Control flow and looping (part 1)
 
-### Day 4
+12:00 - 13:00: Lunch break
 
 13:00 - 13:45: Workshop 6: Control flow and looping (part 2)
 
@@ -63,9 +61,10 @@ Note that the all of the powerpoint slides have speaker notes embedded in them. 
 Also note that the slides and handout are built using a synthetic version of the CCHIC dataset. The CCHIC dataset is a Critical Care collaboration across trusts. Participants can use this synthetic version to practice during the course.  
 
 The GitHub repository will have 3 datasets on it:
-1) A messy spread sheet version of the synthetic CCHIC database for workshop 2
-2) A cleaner verions of the synthetic CCHIC database in .csv format
-3) Readily wrangled synthetic CCHIC database, in case any participants were no present, or lost their work from Workshop 4
+
+1. A messy spread sheet version of the synthetic CCHIC database for workshop 2
+2. A cleaner verions of the synthetic CCHIC database in .csv format
+3. Readily wrangled synthetic CCHIC database, in case any participants were no present, or lost their work from Workshop 4
 
 ## Specific to in-person format
 - If the course is delivered in-person and onsite, a Slack channel will be created for participants of the course. 
