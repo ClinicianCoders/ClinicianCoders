@@ -37,7 +37,7 @@ Try to teach a concepts then they can go home and practice.
 ## Before we start
 
 - Again, please make sure the `cchic` dataframe is loaded into your R environment
-- Please download Workshop7.R via https://github.com/ClinicianCoders/ClinicianCoders/Workshops/Workshop7.R
+- Please download Workshop6.R via https://github.com/ClinicianCoders/ClinicianCoders/blob/master/Workshops/Workshop6.R
 - Question: How do we calculate the mean of every numeric variable in `chicc` and print it out? 
 
 ## Control flow inituition 
