@@ -318,6 +318,7 @@ ggplot(data = sex_vit_prop) +
   theme_bw()
 
 ```
+
 ## Practice
 
 - Open up the R script called `Workshop5.R`.
@@ -327,7 +328,17 @@ ggplot(data = sex_vit_prop) +
 
 ## Useful resources
 
+::::::::::::{.columns}
+:::{.column}
+
 - [ggplot cheatsheet](https://rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf)
 - [ggpubr](http://www.sthda.com/english/articles/24-ggpubr-publication-ready-plots/)
+- [Fundamentals of Data Visualization](https://clauswilke.com/dataviz/)
+
+:::
+:::{.column}
+![](../Images/fundaamentals_of_data_viz.png)
+:::
+:::::::::::: 
 
 # Create your own plots now!
