@@ -891,6 +891,21 @@ data_frame_name <- gs_read("file_name")
 
 \newpage
 
+## Addendum: File paths and "project-oriented workflows"
+
+As you advance in your coding journey, you may will begin to run into some common issues, such as:
+
+- You want to run the same script on a different platform (e.g. Windows --> UNIX), but the path to the data is now different.
+- You want to be able to easily switch between projects, which live in different directories, without having to change your working directory every time.
+
+Fear not, there is a way around this, and it is sometimes known as using "project-oriented" workflows. While it is beyond the scope of this course to introduce this concept, we highly recommend taking a look at these resources:
+
+- [What They Forgot to Teach You About R](https://rstats.wtf/index.html) -- see Chapter 2 on Project-oriented workflows.
+- The package [here](https://here.r-lib.org/articles/here.html) is an excellent package for making the most of project-oriented workflows.
+- And for the You-Tubers among you, check out: [Improve your workflow for reproducible science](https://www.youtube.com/watch?v=JA-vLsN-sic&feature=youtu.be). This is a video from a 2-hour workshop on using R, R Markdown, Git, and GitHub to improve reproducibility. **It is an excellent primer for new starters on good practices to apply to every research project.** Slides from the workshop are available [here](https://mine-cetinkaya-rundel.github.io/improve-repro-workflow-reproducibilitea-2020/).
+
+\newpage
+
 # Workshop 4 - Data Wrangling.
 
 ## Introduction
@@ -1646,7 +1661,7 @@ In this case, we've used the function `seq_along` to convert `animals` into an i
 
 \newpage
 
-# Workshop 7 - Writing functions (deprecated)
+# Workshop - Writing functions (deprecated)
 
 This workshop has been deprecated as of Spring 2019 and is not taught as part of the course, however the materials are kept here for reference.
 
@@ -1701,7 +1716,7 @@ BSA(height = 175, weight = 80)
 
 \newpage
 
-# Workshop 6 - Basic Statistics (deprecated)
+# Workshop - Basic Statistics (deprecated)
 
 This workshop has been deprecated as of November 2020 and is not taught as part of the course, however the materials are kept here for reference. The reason for this is to cover more of the programming fundamentals during the course, rather than the applied statistics (which can vary greatly in their utility for each project). To meet this goal, we have added a new workshop "Control flow and looping" to replace this one. 
 
