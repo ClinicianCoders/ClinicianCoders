@@ -88,7 +88,7 @@ Go through each item on list, make sure each person has completed all items. You
 - 7 workshops
     - These include presentations and chances for you to follow along on your laptops.
     - Workshop 2: You work your way through a worksheet during . 
-    - Workshop 7: You try to answer a question of your own using data. We will ask you to submit this question by the end of Day 3.
+    - Workshop 7: You try to answer a question of your own using data. We will ask you to submit this question by the end of Day 2.
 - A pdf file is available on the GitHub: https://github.com/ClinicianCoders/ClinicianCoders/blob/master/Handout.pdf. It contains all of the content from the course workshops for future reference.  
 
 ## Final note - tips on writing code
