@@ -32,7 +32,7 @@ ggplot(data = cchic) %>%
   geom_point(mapping = aes(x = height, y = weight, colour = sex))
 
 # why hasn't this printed? how would I display the plot?
-# why would I want to go this?
+# why would I want to do this?
 height_vs_weight_plot <- ggplot(data = cchic) +
   geom_point(mapping = aes(x = height, y = weight, colour = sex))
 
