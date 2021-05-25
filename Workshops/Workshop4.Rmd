@@ -262,7 +262,7 @@ Use the `mutate()` function
 
 ```{r, eval = FALSE}
 cchic <- cchic %>%
-  dplyr::mutate(bmi = (weight / (height / 100)^2))
+  dplyr::mutate(bmi = (weight / (height^2)))
 ```
 
 
@@ -335,7 +335,7 @@ Extracting days
 
 ```{r, eval = FALSE}
 cchic <- cchic %>% 
-  dplyr::mutate(discharge_day = day(ymd_hms(cchic$discharge_dttm)))
+  dplyr::mutate(discharge_day = day(ymd_hms(discharge_dttm)))
 
 str(cchic$discharge_day)
 ```
@@ -358,6 +358,7 @@ cchic <- cchic %>%
 
 ::: notes
 Warn them that this concept takes a while to grasp.
+Also warn them that in the temp_point column, it should in fact say "temp_c" and "temp_nc".
 :::
 
 ## Why do this?

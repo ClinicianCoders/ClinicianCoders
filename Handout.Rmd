@@ -1074,7 +1074,7 @@ You can do this with the `mutate()` function.
 
 ```{r}
 cchic <- cchic %>%
-  mutate(bmi = (weight / (height / 100)^2))
+  mutate(bmi = (weight / (height)^2))
 ```
 
 You have created the new variable `bmi`. You can also use the `mutate()` function to change the vector type of a variable. 
@@ -1176,7 +1176,7 @@ str(cchic$year_born)
 - Extracting days.
 ```{r}
 cchic <- cchic %>% 
-  mutate(discharge_day = day(ymd_hms(cchic$discharge_dttm)))
+  mutate(discharge_day = day(ymd_hms(discharge_dttm)))
 str(cchic$discharge_day)
 ```
 
@@ -1201,7 +1201,7 @@ You may want to do this to your data is you are interested in creating time seri
 
 The conversion looks like this.
 <p>
-![](Images/WideToLong.png)
+![](Images/gatherspread.png)
 <p>
 
 This is how you convert the data.
