@@ -354,11 +354,10 @@ cchic <- cchic %>%
 
 ## 6. Columns to rows and back again
 
-![Convert data spread over several variables into a single one](../Images/gatherspread.png)
+![A dataframe can pivoted in two ways: longer or wider.](../Images/gatherspread.png)
 
 ::: notes
-Warn them that this concept takes a while to grasp.
-Also warn them that in the temp_point column, it should in fact say "temp_c" and "temp_nc".
+Warn them that this concept takes a while to grasp. Also, warn participants that gather/spread have been superseded by pivot_longer/pivot_wider.
 :::
 
 ## Why do this?
@@ -370,18 +369,21 @@ Also warn them that in the temp_point column, it should in fact say "temp_c" and
 ## Converting the data
 
 **Try this.**
-```{r, eval = FALSE}
+```{r, eval = TRUE}
 cchic_long <- cchic %>%
-  tidyr::gather(key = "temp_point", 
-                value = "temperature", 
-                temp_c:temp_nc)
+  tidyr::pivot_longer(
+    cols = temp_c:temp_nc, 
+    names_to = "temp_point",
+    values_to = "temperature"
+  ) %>% 
+  dplyr::select(nhs_number, contains("temp"))
 
 names(cchic_long)
 ```
 
-## Plotting the gathered data
+## Plotting the "longer" data
 
-```{r, eval = FALSE}
+```{r, eval = T}
 cchic_long %>%
   ggplot(aes(
     x = temp_point, y =
@@ -390,19 +392,18 @@ cchic_long %>%
   geom_boxplot()
 ```
 
-::: notes
-Get them to do this. 
-:::
-
 ## What if we want to convert it back?
 
-We can use the `tidyr` function, `spread()`.
+We can use the `tidyr` function, `pivot_wider()`.
 
-```{r, eval = F}
+```{r, eval = T}
 
-cchic_reverted <- cchic_long %>%
-  tidyr::spread(key = "temp_point", 
-                value = "temperature")
+cchic_reverted <- 
+  cchic_long %>%
+  tidyr::pivot_wider(
+    names_from = temp_point,
+    values_from = temperature
+  )
 
 names(cchic_reverted)
 ```

@@ -1210,10 +1210,14 @@ This is how you convert the data.
 library(tidyr)
 
 cchic_long <- cchic %>%
-  gather(
-    "temp_point", "temperature",
-    temp_c:temp_nc
-  )
+  tidyr::pivot_longer(
+    cols = temp_c:temp_nc, 
+    names_to = "temp_point",
+    values_to = "temperature"
+  ) %>% 
+  dplyr::select(nhs_number, contains("temp"))
+
+names(cchic_long)
 ```
 
 Look at the what the new variables contain.
@@ -1232,6 +1236,23 @@ cchic_long %>%
   )) +
   geom_boxplot()
 ```
+What if you then want to convert back to original form?
+
+We can use the `tidyr` function, `pivot_wider()`.
+
+```{r}
+
+cchic_reverted <- 
+  cchic_long %>%
+  tidyr::pivot_wider(
+    names_from = temp_point,
+    values_from = temperature
+  )
+
+names(cchic_reverted)
+```
+
+Notice that the variables "temp_c" and "temp_nc" are seperate again.
 
 \newpage
 
