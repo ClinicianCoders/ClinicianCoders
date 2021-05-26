@@ -300,7 +300,7 @@ ggplot(data = sex_vit_prop) +
   scale_x_discrete(name = "Survival", labels = c(1, 0)) +
   scale_y_continuous(name = "Proportion") + 
   scale_fill_manual(name = "Gender", 
-                    values = ggpubr::get_palette("npg", 2), 
+                    values = ggpubr::get_palette("jama", 2), 
                     labels = c("female", "male"))
 
 ```
@@ -313,7 +313,7 @@ ggplot(data = sex_vit_prop) +
   scale_x_discrete(name = "Survival", labels = c(1, 0)) +
   scale_y_continuous(name = "Proportion") + 
   scale_fill_manual(name = "Gender", 
-                    values = ggpubr::get_palette("npg", 2), 
+                    values = ggpubr::get_palette("jama", 2), 
                     labels = c("female", "male")) + 
   theme_bw()
 
