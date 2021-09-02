@@ -142,11 +142,11 @@ for(i in 1:5){
 
 for(i in 1:length(cchic)){
   
-  print(names(cchic[i]))
+
   
-  if(is.numeric(cchic[[i]])){
+  if(){
     
-    print(mean(cchic[[i]]))
+
     
   }
   

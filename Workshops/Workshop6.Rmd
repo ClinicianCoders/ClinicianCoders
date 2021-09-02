@@ -145,9 +145,15 @@ if(username == "the1andonly"){
 
 ```{r}
 
+# plot a histogram to check for normality of the urea column
 ggplot(data = cchic) + 
   geom_histogram(aes(x = urea), bins = 30)
 
+```
+
+```{r}
+
+# depending on the plot, assign T or F to the normal variable 
 normal <- FALSE
 
 if(normal == TRUE){
