@@ -249,7 +249,6 @@ ggplot(data = cchic) +
 sex_vit_prop <- cchic %>% 
   group_by(vital_status, sex) %>% 
   summarize(n = n()) %>% 
-  group_by(vital_status) %>% 
   mutate(n_total = sum(n), 
          prop = n/n_total)
 
