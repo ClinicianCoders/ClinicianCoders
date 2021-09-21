@@ -70,6 +70,10 @@ Go through each item on list, make sure each person has completed all items. You
   - **Participant-specific questions/issues that are hindering ability to follow workshop** --> navigate to a break-out room 
   - **Participant-specific questions/issues that do not require immediate assistance** --> post these in the Teams chat
 
+::: notes
+Might be worth checking if everyone can access the chat. We've had issues with this before.
+:::
+
 ## The data
 
 - We use the Critical Care Health Informatics Collaborative dataset.
