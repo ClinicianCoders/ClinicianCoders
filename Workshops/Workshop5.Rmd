@@ -304,6 +304,7 @@ ggplot(data = sex_vit_prop) +
                     labels = c("female", "male"))
 
 ```
+
 ## Changing the overall theme
 
 ```{r}

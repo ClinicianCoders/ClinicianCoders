@@ -66,7 +66,7 @@ library(tidyverse)
 ## Load data
 
 
-From the previous workshop, you should still have a data frame named `cchic` in your environment.
+- From the previous workshop, you should still have a data frame named `cchic` in your environment.
 If not, please load it again.
 
 ## Two concepts you need to know before using dplyr
@@ -116,7 +116,7 @@ This is the second thing we need to learn. It applies to most parts of R.
 
 ## Example of using logical operators
 
-Try running:
+- Try running:
 ```{r}
 test_age <- c(50, 25, 32, 67, 46, 19)
 
@@ -125,7 +125,7 @@ test_age >= 65
 
 ```
 
-It should return a logical vector. This can then be used to filter your vector.
+- It should return a logical vector. This can then be used to filter your vector.
 
 ```{r}
 # Extract elements of vector which are >= 65
@@ -134,14 +134,14 @@ test_age[test_age >= 65]
 
 ## filter()
 
-Choose rows based on the conditions you specify.
+- Choose rows based on the conditions you specify.
 
 ```{r, eval = FALSE}
 cchic %>%
   dplyr::filter(age_years >= 65)
 ```
 
-The output is a data frame where all patients are 65 years or older.
+- The output is a data frame where all patients are 65 years or older.
 
 ::: notes
 Dplyr works using 'verbs'. The first one is `filter`.
@@ -149,14 +149,14 @@ Dplyr works using 'verbs'. The first one is `filter`.
 
 ## select()
 
-Allows you to choose specific variables from your dataset.
+- Allows you to choose specific variables from your dataset.
 
 ```{r, eval = FALSE}
 cchic %>%
   dplyr::select(sex)
 ```
 
-Output is a data frame with the gender of all patients.
+- Output is a data frame with the gender of all patients.
 
 ::: notes
 The second verb is select.
@@ -170,19 +170,19 @@ cchic %>%
   dplyr::select(sex)
 ```
 
-Output is the gender of patients who are 65 years or older.
+- Output is the gender of patients who are 65 years or older.
 
-**Question**:What happens if you do `select()` and then `filter()`? 
+- **Question**:What happens if you do `select()` and then `filter()`? 
 
 ## Using filter() and select() together
 
-**Question**:What happens if you do `select()` and then `filter()`? 
+- **Question**:What happens if you do `select()` and then `filter()`? 
 
-*You have removed the age variable from the dataset, so you can’t filter based on age.*
+- *You have removed the age variable from the dataset, so you can’t filter based on age.*
 
 ## Piped data with functions
 
-Piped data can be passed on to almost any function in R
+- Piped data can be passed on to almost any function in R
 
 ```{r, eval = FALSE}
 cchic %>%
@@ -191,7 +191,7 @@ cchic %>%
   summary()
 ```
 
-Gives information on gender for patients older than 65.
+- Gives information on gender for patients older than 65.
 
 ## Other dplyr wrangling verbs
 
@@ -201,7 +201,7 @@ Gives information on gender for patients older than 65.
 
 ## Exercise: Using group_by() and summarise()
 
-**Try this.**
+- **Try this.**
 ```{r, eval = FALSE}
 cchic %>%
   dplyr::group_by(sex) %>%
@@ -220,16 +220,16 @@ cchic %>%
                                     na.rm = TRUE))
 ```
 
-An alternative is to filter out the missing values of urea.
+- An alternative is to filter out the missing values of urea.
 
 ## Take a break. Any questions?
 
-Make sure you are happy running
+- Make sure you are happy running
 
-- `filter()`
-- `select()`
-- `group_by()`
-- `summarise()`
+    - `filter()`
+    - `select()`
+    - `group_by()`
+    - `summarise()`
 
 ## Favourite data tidying 'recipes'
 
@@ -248,7 +248,7 @@ Make sure you are happy running
 names(cchic)
 ```
 
-The variable called `na` is very confusing
+- The variable called `na` is very confusing
 
 ```{r, eval = FALSE}
 cchic <- cchic %>%
@@ -258,7 +258,7 @@ cchic <- cchic %>%
 
 ## 2. Create a new variable
 
-Use the `mutate()` function 
+- Use the `mutate()` function 
 
 ```{r, eval = FALSE}
 cchic <- cchic %>%
@@ -268,13 +268,13 @@ cchic <- cchic %>%
 
 ## 3. Extract numbers
 
-Parse numbers from text using the `readr` package.
+- Parse numbers from text using the `readr` package.
 
 ```{r, eval = FALSE}
 library(readr)
 ```
 
-Create a vector where the unit has been included as part of the value.
+- Create a vector where the unit has been included as part of the value.
 You can't do maths on this vector. 
 ```{r, eval = T}
 weight <- c("70kg", "80 kg", "82 kg", "74", "39")
@@ -290,20 +290,20 @@ library(stringr)
 test_gender <- c("f", "F", "M", "f")
 ```
 
-Notice that `female` is coded in 2 different ways  
+- Notice that `female` is coded in 2 different ways  
 
-We can change all of the letters to uppercase.
+- We can change all of the letters to uppercase.
 ```{r}
 test_gender <- stringr::str_to_upper(test_gender)
 test_gender
 ```
 
-Look at the manipulate strings cheat sheet (https://resources.rstudio.com/rstudio-developed/strings) for other functions you can use.
+- Look at the manipulate strings cheat sheet (https://resources.rstudio.com/rstudio-developed/strings) for other functions you can use.
 
 
 ## 5. Working with dates
 
-R treats dates as characters unless you tell it not to.
+- R treats dates as characters unless you tell it not to.
 
 ```{r, message = FALSE}
 library(lubridate)
@@ -311,7 +311,7 @@ library(lubridate)
 test_dates <- c("02-01-12", "03-04-15", "15-06-02")
 ```
 
-Convert these characters to dates. 
+- Convert these characters to dates. 
 ```{r}
 test_dates <- lubridate::dmy(test_dates)
 test_dates
@@ -320,9 +320,9 @@ test_dates
 
 ## 5. Working with dates - parsing dates
 
-We can extract components of dates. 
+- We can extract components of dates. 
 
-Extracting years
+- Extracting years
 
 ```{r, eval = FALSE}
 cchic <- cchic %>% 
@@ -331,7 +331,7 @@ cchic <- cchic %>%
 str(cchic$year_born)
 ```
 
-Extracting days
+- Extracting days
 
 ```{r, eval = FALSE}
 cchic <- cchic %>% 
@@ -342,7 +342,7 @@ str(cchic$discharge_day)
 
 ## 5. Working with dates - date intervals
 
-We often want to calculate the difference between two dates or times.
+- We often want to calculate the difference between two dates or times.
 Let's calculate the length of stay of patients admitted to the ICU.
 
 ```{r, eval = FALSE}
@@ -368,7 +368,7 @@ Warn them that this concept takes a while to grasp. Also, warn participants that
 
 ## Converting the data
 
-**Try this.**
+- **Try this.**
 ```{r, eval = TRUE}
 cchic_long <- cchic %>%
   tidyr::pivot_longer(
@@ -394,7 +394,7 @@ cchic_long %>%
 
 ## What if we want to convert it back?
 
-We can use the `tidyr` function, `pivot_wider()`.
+- We can use the `tidyr` function, `pivot_wider()`.
 
 ```{r, eval = T}
 
@@ -408,20 +408,20 @@ cchic_reverted <-
 names(cchic_reverted)
 ```
 
-Notice that the variables "temp_c" and "temp_nc" are seperate again.
+- Notice that the variables "temp_c" and "temp_nc" are seperate again.
 
 ## 7. Deleting columns
 
-What if we wanted to remove the `temp_nc` variable?
+- What if we wanted to remove the `temp_nc` variable?
 
 ```{r, eval = FALSE}
 cchic %>%
   dplyr::select(-temp_nc)
 ```
 
-The `-` sign means deselect here. 
+- The `-` sign means deselect here. 
 
-Don’t forget to assign the above code to something, otherwise the output won’t be saved.
+- Don’t forget to assign the above code to something, otherwise the output won’t be saved.
 
 ## Excercise
 

@@ -23,7 +23,7 @@ cchic <- read_csv("../clean_CCHIC.csv")
 2.  Initial exploration of your data set.  
 \newparagraph
 
-The handout also includes some tips on importing data from Google Sheets.
+- The handout also includes some tips on importing data from Google Sheets.
 
 ## Introduction
 - You have now learnt to input data into R manually.  
@@ -114,21 +114,20 @@ Candidates don't necessarily need to do this at the moment.
 
 ## Brief interlude...
 
-Common file path problems:
+- Common file path problems:
 
-- You want to run the same script on a different platform (e.g. Windows --> UNIX), but the path to the data is now different.
-- You want to be able to easily switch between projects, which live in different directories, without having to change your working directory every time.
+    - You want to run the same script on a different platform (e.g. Windows --> UNIX), but the path to the data is now different.
+    - You want to be able to easily switch between projects, which live in different directories, without having to change your working directory every time.
 
 ## Brief interlude... 
 
-The answer to this: "Project-oriented workflows"
+- The answer to this: "Project-oriented workflows"
 
-- [What They Forgot to Teach You About R](https://rstats.wtf/index.html) -- see Chapter 2 on Project-oriented workflows.
-- The package [here](https://here.r-lib.org/articles/here.html) is an excellent package for making the most of project-oriented workflows.
-- And for the You-Tubers among you, check out: [Improve your workflow for reproducible science](https://www.youtube.com/watch?v=JA-vLsN-sic&feature=youtu.be)
+    - [What They Forgot to Teach You About R](https://rstats.wtf/index.html) -- see Chapter 2 on Project-oriented workflows.
+    - The package [here](https://here.r-lib.org/articles/here.html) is an excellent package for making the most of project-oriented workflows.
+    - And for the You-Tubers among you, check out: [Improve your workflow for reproducible science](https://www.youtube.com/watch?v=JA-vLsN-sic&feature=youtu.be)
 
 ## Getting your work into R  
-There are 3 main methods
 
 1.  Point and click  
 
@@ -144,6 +143,10 @@ There are 3 main methods
       
 3.  Connecting to an online database or google spreadsheet 
       - This will only be mentioned in the handout
+      
+::: notes
+Three main methods
+:::
 
 ## Method 1: Point and click
 ::::::::::::{.columns}
@@ -253,14 +256,14 @@ read_csv("../clean_CCHIC.csv")
 
 ## Reviewing your data in R
 
-Spreadsheets in R are called data frames 
-You can use these functions to investigate your data frame: 
+- Spreadsheets in R are called data frames 
+- You can use these functions to investigate your data frame: 
 
-- `head(cchic)`  
-- `tail(cchic)`  
-- `names(cchic)`  
-- `class(cchic)`
-- `str(cchic)`  
+    - `head(cchic)`  
+    - `tail(cchic)`  
+    - `names(cchic)`  
+    - `class(cchic)`  
+    - `str(cchic)`  
       
 ## head()
 
@@ -268,7 +271,7 @@ You can use these functions to investigate your data frame:
 head(cchic)
 ```
 
-Prints the first 6 rows of the data frame.
+- Prints the first 6 rows of the data frame.
 
 ## tail()
 
@@ -276,7 +279,7 @@ Prints the first 6 rows of the data frame.
 tail(cchic)
 ```
 
-Prints the last 6 rows of the data frame.
+- Prints the last 6 rows of the data frame.
 
 ## names()
 
@@ -284,14 +287,14 @@ Prints the last 6 rows of the data frame.
 names(cchic)
 ```
 
-Prints the names of the variables. 
+- Prints the names of the variables. 
 
 ## class()
 
 ```{r, eval = F}
 class(cchic)
 ```
-Prints the class of the object `cchic`.
+- Prints the class of the object `cchic`.
 
 ## str()
 
@@ -299,17 +302,17 @@ Prints the class of the object `cchic`.
 str(cchic)
 ```
 
-Prints the data type of each variable in `cchic`.
+- Prints the data type of each variable in `cchic`.
 
 ## Look at specific items
 
-You can look at specific data points.
+- You can look at specific data points.
 
 ```{r}
 cchic[21, 5]
 ```
 
-This displays the the piece of data in the 21st row and 5th column.
+- This displays the the piece of data in the 21st row and 5th column.
 
 ## Selecting variables using $ sign
 
@@ -349,34 +352,34 @@ Let them explore these if you have time.
    b) Use it to see how many vectors contain information about "temp".
   
 ## Answer 1.
-What types of variables do you have in `cchic`?
+- What types of variables do you have in `cchic`?
 
 ```{r, eval = F}
 str(cchic)
 ```
 
 ## Answer 2
-Display the `discharge_dttm` vector in `cchic`.
+- Display the `discharge_dttm` vector in `cchic`.
 ```{r, eval = F}
 cchic$discharge_dttm
 ```
 
 ## Answer 3
-How many men and women are in the database?
+- How many men and women are in the database?
 ```{r}
 table(cchic$sex)
 ```
 
 ## Answer 4
-How many survived and how many died?
+- How many survived and how many died?
 ```{r}
 table(cchic$vital_status)
 ```
 
 ## Answer 5
-What does the function `ls()` do?
+- What does the function `ls()` do?
 ```{r}
 ls(cchic, pattern = "temp")
 ```
 
-This lists all of the variables in `cchic` containing the word "temp".
+- This lists all of the variables in `cchic` containing the word "temp".

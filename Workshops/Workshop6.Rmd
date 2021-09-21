@@ -295,7 +295,6 @@ for(i in 1:5){
 
 ```{r}
 for(i in 1:5){
-  
   # the %% here checks the remainder when i is divided by 2
   if(i %% 2 == 0){
     
@@ -307,7 +306,6 @@ for(i in 1:5){
     
   }
 }
-
 ```
 
 ## Practice 3

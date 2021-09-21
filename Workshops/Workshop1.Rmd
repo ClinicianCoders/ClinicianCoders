@@ -132,7 +132,7 @@ Explain what each button does.
 
 ## Console output
 
-You should see:
+- You should see:
 
 ```{r}
 2 + 2
@@ -287,7 +287,7 @@ class(logical_vector)
 
 ## Naming vectors
 
-The `c()` function combines individual values into a single vector.
+- The `c()` function combines individual values into a single vector.
 ```{r}
 # Storing several ages in one vector.
 age <- c(50, 25, 32, 67, 46, 19)
@@ -549,12 +549,12 @@ Get them to load tidyverse. Emphasise that this is a process we will keep repeat
 
 ## Other useful packages
 
-These are some packages we will be user later in the course.
+- These are some packages we will be user later in the course.
 
-- `ggplot2` - plots graphs in R
-- `readr` - imports data into R
-- `stringr` - helps you manipulate strings
-- `lubridate` - helps you manipulate dates
+    - `ggplot2` - plots graphs in R
+    - `readr` - imports data into R
+    - `stringr` - helps you manipulate strings
+    - `lubridate` - helps you manipulate dates
 
 ::: notes
 Maybe mention that a few of these packages are loaded with tidyverse.
