@@ -449,7 +449,7 @@ patients$age
 ## Functions
 - You have been using functions already!
 - `data.frame()` is a function.
-- `age, gender, weight` are the input arguments.
+- `name, age, gender` are the input arguments.
 
 ```{r}
 data.frame(name, age, gender)
