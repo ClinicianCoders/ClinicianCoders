@@ -121,7 +121,7 @@ if(username == "the1andonly"){
 ## Practice 1
 
 - Try modifying example 3 to your own name, then rerunning - what does it print now? 
-- Try filling in the practice to compute the correct summary statistic (`mean` or `median`) on the variable `cchic$urea`. Use `print` to print our your result. Remember to remove NA's if needed. 
+- Try filling in the practice to compute the correct summary statistic (`mean` or `median`) on the variable `cchic$urea`. Use `print` to print out your result. Remember to remove NA's if needed. 
 
 ## Answer 1
 
@@ -254,7 +254,7 @@ for(i in 1:5){
 
 - Write a loop that iterates across every column of `cchic` and prints out the column name of each column. 
 - Hint: `length(cchic)` will return the number of columns.
-- Hint: `print(names(cchic[1]))` will print out the contents of column 1. 
+- Hint: `print(names(cchic[1]))` will print out the name of column 1. 
 
 ## Answer 
 
