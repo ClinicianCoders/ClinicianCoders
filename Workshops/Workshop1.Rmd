@@ -186,6 +186,34 @@ See
 
 :::
 
+## Good practices for writing R scripts
+
+:::::::::::::: {.columns}
+::: {.column}
+
+- Well-written scripts should be:
+    - Clear in their intended purpose
+    - Explicit about requirements/dependencies
+    - Sequential
+    - Consistent in their style
+- As an example, see: [Workshop1.R](https://github.com/ClinicianCoders/ClinicianCoders/blob/master/Workshops/Workshop1.R).
+- See also:
+    - [The tidyverse style guide](https://style.tidyverse.org)
+    - Tips from the [US Geological Survey](https://waterdata.usgs.gov/blog/intro-best-practices/)
+    - A blog post on [best practices](https://towardsdatascience.com/best-practices-for-r-programming-ec0754010b5a)
+:::
+::: {.column}
+![](../Images/ScriptStructure.png)
+:::
+::::::::::::::
+
+::: notes
+
+Use this section to introduce the idea of organising code in a sequential, organised manner that eases reproducibility.
+
+:::
+    
+
 ## R building blocks
 
 - Object names
@@ -263,19 +291,19 @@ say hello <- "hello"
 
 - A vector contains elements of the same data type.
     - A vector of integers - an example would be age
-    ```{r, echo = FALSE}
+```{r, echo = FALSE}
 c(50, 25, 32, 67, 46, 19, 48)
 ```
     - A vector of real numbers - an example would be temperature.
-    ```{r, echo = FALSE}
+```{r, echo = FALSE}
 c(37.5, 37.1, 37.3, 38.3, 37.4, 38.9)
 ```
     - A vector of characters/strings - an example would be name.
-    ```{r, echo = FALSE}
+```{r, echo = FALSE}
 c("Adam", "Sally", "Eve", "John", "James")
 ```
     - A vector of logicals - an example would be 'are the blood results avaiblable?'
-    ```{r, echo = FALSE}
+```{r, echo = FALSE}
 c(TRUE, FALSE, FALSE, TRUE, TRUE)
 ```
 - You can always check the data type in a vector using the function `class()`.
