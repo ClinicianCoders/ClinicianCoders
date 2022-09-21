@@ -12,7 +12,7 @@ This course assumes no prior knowledge of the tools, but working through the cou
 
 - Install RStudio
 
-- Download and install a speadsheet program
+- Download and install a spreadsheet program
 
 - Decide on the dataset you want to use for practice.
 
