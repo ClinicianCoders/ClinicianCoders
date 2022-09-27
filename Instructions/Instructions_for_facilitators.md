@@ -38,7 +38,7 @@ This is a guide to help you understand the structure of the day. We hope that to
 
 14:30 - 16:30: Workshop 4: Data Wrangling 
 
-### Day 3
+### Day 2
 
 09:00 - 10:30: Workshop 5: Data visualisation
 
