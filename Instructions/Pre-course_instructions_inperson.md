@@ -55,7 +55,7 @@ You can download the binary files for your distribution from [CRAN](http://cran.
 - For this lesson, if you don't have a spreadsheet program already, you can use [LibreOffice](https://www.libreoffice.org/). It's a free, open source spreadsheet program.
 
 ### 4. Join our group on Slack
-Slack is a geeky version of WhatsApp, but much better for coding and collaborating. We will use it to share files. You can use it chat, to ask questions, share material, and provide feedback. You should recieve an email invite to our group before the course.
+Slack is a geeky version of WhatsApp, but much better for coding and collaborating. We will use it to share files. You can use it chat, to ask questions, share material, and provide feedback. You should receive an email invite to our group before the course.
 
 ### 5. Decide on the dataset you want to use for practice.
 - The course is run on a synthetic version of the CCHIC database, which is a Critical Care Collaboration across trusts. This is not real patient data, but is made to look real! You will all have access to this dataset. 
