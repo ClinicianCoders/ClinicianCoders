@@ -26,7 +26,7 @@ This is a guide to help you understand the structure of the day. We hope that to
 
 09:30 - 11:00: Workshop 1: Introduction to R
 
-11:00 - 11:15: Coffee Break
+11:00 - 11:15: Break
 
 11:15 - 12:00: Workshop 2: Cleaning your Dataset
 
@@ -34,7 +34,7 @@ This is a guide to help you understand the structure of the day. We hope that to
 
 13:00 - 14:15: Workshop 3: Getting your Data into R 
 
-14:15 - 14:30: Coffee Break
+14:15 - 14:30: Break
 
 14:30 - 16:30: Workshop 4: Data Wrangling 
 
@@ -42,7 +42,7 @@ This is a guide to help you understand the structure of the day. We hope that to
 
 09:00 - 10:30: Workshop 5: Data visualisation
 
-10:30 - 10:45: Coffee break
+10:30 - 10:45: Break
 
 10:45 - 12:00: Workshop 6: Control flow and looping (part 1)
 
@@ -50,7 +50,7 @@ This is a guide to help you understand the structure of the day. We hope that to
 
 13:00 - 13:45: Workshop 6: Control flow and looping (part 2)
 
-13:45 - 14:00: Coffee break
+13:45 - 14:00: Break
 
 14:00 - 16:00: Workshop 7: Using your own data
 
