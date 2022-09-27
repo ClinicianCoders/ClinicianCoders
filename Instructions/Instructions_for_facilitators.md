@@ -7,13 +7,13 @@ This is a guide to help you understand the structure of the day. We hope that to
 
 ## Structure of the Course
 
-- The course is made up of a total of 7 workshops given across 2 afternoons and 1 full day
+- The course is made up of a total of 7 workshops given across 2 full days
 - 6 of these consist of a set of slides
 - 2 of these (workshop 2 and 7) are *hands on* sessions for the participants
     - Here, your role as facilitator will be slightly different
     - You will be supporting participants on an individual basis with their queries as they work through problems
 - For each workshop there will be 3 facilitators
-    - 1 lead facilitator, who will also be co-ordinating and presenting that workshop's contents
+    - 1 lead facilitator, who will also be coordinating and presenting that workshop's contents
     - 2 assistant facilitators
 - The lead facilitator could be the same person across all course days, different on each day or they may alternate on a single day
 - You should have been told in advance what your role will be
@@ -22,25 +22,25 @@ This is a guide to help you understand the structure of the day. We hope that to
 
 ### Day 1
 
-13:00 - 13:30: Start and Welcome
+09:00 - 09:30: Start and Welcome
 
-13:30 - 15:00: Workshop 1: Introduction to R
+09:30 - 11:00: Workshop 1: Introduction to R
 
-15:00 - 15:15: Coffee Break
+11:00 - 11:15: Coffee Break
 
-15:15 - 16:00: Workshop 2: Cleaning your Dataset
+11:15 - 12:00: Workshop 2: Cleaning your Dataset
 
-### Day 2
+12:00 - 13:00: Lunch break
 
 13:00 - 14:15: Workshop 3: Getting your Data into R 
 
 14:15 - 14:30: Coffee Break
 
-14:30 - 16:45: Workshop 4: Data Wrangling 
+14:30 - 16:30: Workshop 4: Data Wrangling 
 
 ### Day 3
 
-09:00 - 10:30: Workshop 5: Data visualization
+09:00 - 10:30: Workshop 5: Data visualisation
 
 10:30 - 10:45: Coffee break
 
@@ -123,6 +123,6 @@ The GitHub repository will have 3 datasets on it:
 - Includes an R script which is just a template for working in R and analysing data generally. Upload to the Slack/Teams at the beginning, and let participants look through it in their own time.
 - If participants have not brought in their own data, give them the opportunity to answer questions they may be interested in using the synthetic CCHIC dataset. 
 - **In-person format:** Allow participants to work with their own data. Just go around providing assistance as required. 
-- **Online format:** On Day 1, ask participants to summarise their goals for their own data in one “attainable" aim. This will be given to facilitators at the end of Day 3. Thereafter, facilitators will go through goals and attempt to group participants into those with similar goals. As a minimum, aim to group participants into ~3 groups of 3-5 people. Then, facilitators will go around these groups (one breakout room per group) during the data session and try to help where needed.
+- **Online format:** On Day 1, ask participants to summarise their goals for their own data in one "attainable" aim. This will be given to facilitators at the end of Day 3. Thereafter, facilitators will go through goals and attempt to group participants into those with similar goals. As a minimum, aim to group participants into ~3 groups of 3-5 people. Then, facilitators will go around these groups (one breakout room per group) during the data session and try to help where needed.
 
 Thank you, and good luck!
