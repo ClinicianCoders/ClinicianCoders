@@ -150,7 +150,7 @@ We now get to draw graphs!
 - Base R has visualisation commands
 
 - `ggplot2` package (part of `tidyverse`):
-    - Grammar of graphics - layered structure: 
+    - Grammar of graphics - layered structure. 
 - To load it now: `library(ggplot2)`
 
 ## Structure of a ggplot command
@@ -197,30 +197,54 @@ Get them to type this code in and draw the graph. The graph they should get is o
 :::
 
 ```{r, eval = T, message=FALSE}
-ggplot(data = cchic) +
+plot <- ggplot(data = cchic) +
   geom_smooth(mapping = aes(x = wbc, y = crp))
+```
+
+##
+
+```{r, eval = T, echo = F, message=FALSE}
+plot
 ```
 
 ## Adding a linetype
 
 ```{r, eval = T, message=FALSE}
-ggplot(data = cchic) +
+plot <- ggplot(data = cchic) +
   geom_smooth(mapping = aes(x = wbc, y = crp, linetype = sex))
+```
+
+##
+
+```{r, eval = T, echo = F, message=FALSE}
+plot
 ```
 
 ## Adding colour 
 
 ```{r, eval = T, message=FALSE}
-ggplot(data = cchic) +
+plot <- ggplot(data = cchic) +
   geom_smooth(mapping = aes(x = wbc, y = crp, colour = sex))
+```
+
+##
+
+```{r, eval = T, echo = F, message=FALSE}
+plot
 ```
 
 ## Combining multiple geoms
 
 ```{r, , message=FALSE}
-ggplot(data = cchic) +
+plot <- ggplot(data = cchic) +
   geom_point(mapping = aes(x = wbc, y = crp, colour = sex)) +
   geom_smooth(mapping = aes(x = wbc, y = crp))
+```
+
+##
+
+```{r, eval = T, echo = F, message=FALSE}
+plot
 ```
 
 ## Bar Graph
@@ -230,16 +254,28 @@ ggplot(data = cchic) +
 ## Drawing a bar graph
 
 ```{r, eval = T, message=FALSE}
-ggplot(data = cchic) +
+plot <- ggplot(data = cchic) +
   geom_bar(mapping = aes(x = vital_status))
 
+```
+
+##
+
+```{r, eval = T, echo = F, message=FALSE}
+plot
 ```
 
 ## Adding a second aesthetic
 
 ```{r, eval = T, message=FALSE}
-ggplot(data = cchic) +
+plot <- ggplot(data = cchic) +
   geom_bar(mapping = aes(x = vital_status, fill = sex))
+```
+
+##
+
+```{r, eval = T, echo = F, message=FALSE}
+plot
 ```
 
 ## Standardising proportions
@@ -252,15 +288,26 @@ sex_vit_prop <- cchic %>%
   mutate(n_total = sum(n), 
          prop = n/n_total)
 
-ggplot(data = sex_vit_prop) +
+plot <- ggplot(data = sex_vit_prop) +
   geom_col(mapping = aes(x = vital_status, y = prop, fill = sex))
+```
+##
+
+```{r, eval = T, echo = F, message=FALSE}
+plot
 ```
 
 ## Changing position of bars
 
 ```{r, eval = T, message=FALSE}
-ggplot(data = sex_vit_prop) +
+plot <- ggplot(data = sex_vit_prop) +
   geom_col(mapping = aes(x = vital_status, y = prop, fill = sex), position = "dodge")
+```
+
+##
+
+```{r, eval = T, echo = F, message=FALSE}
+plot
 ```
 
 ## Scales and themes
@@ -273,28 +320,40 @@ ggplot(data = sex_vit_prop) +
 
 ```{r}
 
-ggplot(data = sex_vit_prop) +
+plot <- ggplot(data = sex_vit_prop) +
   geom_col(mapping = aes(x = vital_status, y = prop, fill = sex), position = "dodge") + 
   scale_x_discrete(name = "Survival", labels = c(1, 0)) 
 
+```
+
+##
+
+```{r, eval = T, echo = F, message=FALSE}
+plot
 ```
 
 ## Improving the y-axis labels
 
 ```{r}
 
-ggplot(data = sex_vit_prop) +
+plot <- ggplot(data = sex_vit_prop) +
   geom_col(mapping = aes(x = vital_status, y = prop, fill = sex), position = "dodge") + 
   scale_x_discrete(name = "Survival", labels = c(1, 0)) +
   scale_y_continuous(name = "Proportion")
 
 ```
 
+##
+
+```{r, eval = T, echo = F, message=FALSE}
+plot
+```
+
 ## Improving the colours
 
 ```{r}
 
-ggplot(data = sex_vit_prop) +
+plot <- ggplot(data = sex_vit_prop) +
   geom_col(mapping = aes(x = vital_status, y = prop, fill = sex), position = "dodge") + 
   scale_x_discrete(name = "Survival", labels = c(1, 0)) +
   scale_y_continuous(name = "Proportion") + 
@@ -304,11 +363,17 @@ ggplot(data = sex_vit_prop) +
 
 ```
 
+##
+
+```{r, eval = T, echo = F, message=FALSE}
+plot
+```
+
 ## Changing the overall theme
 
 ```{r}
 
-ggplot(data = sex_vit_prop) +
+plot <- ggplot(data = sex_vit_prop) +
   geom_col(mapping = aes(x = vital_status, y = prop, fill = sex), position = "dodge") + 
   scale_x_discrete(name = "Survival", labels = c(1, 0)) +
   scale_y_continuous(name = "Proportion") + 
@@ -317,6 +382,12 @@ ggplot(data = sex_vit_prop) +
                     labels = c("female", "male")) + 
   theme_bw()
 
+```
+
+##
+
+```{r, eval = T, echo = F, message=FALSE}
+plot
 ```
 
 ## Practice
