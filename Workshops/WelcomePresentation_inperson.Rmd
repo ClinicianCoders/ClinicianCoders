@@ -39,19 +39,19 @@ Tell people that they can sign the CCHIC user sharing agreement if they want to 
 
 ## Schedule - Day 1
 
-- 09:00 - 09:30: Start and welcome
+- 09:30 - 11:00: Workshop 1: Introduction to R
 
-- 09:30 - 10:30: Workshop 1: Introduction to R
+- 11:00 - 11:15: Coffee Break
 
-- 10:30 - 11:00: Coffee break
+- 11:15 - 12:00: Workshop 2: Cleaning your Dataset
 
-- 11:00 - 11:45: Workshop 2: Cleaning your dataset
+- 12:00 - 13:00: Lunch break
 
-- 11:45 - 13:00: Workshop 3: Getting your data into R
+- 13:00 - 14:15: Workshop 3: Getting your Data into R
 
-- 13:00 - 14:00: Lunch
+- 14:15 - 14:30: Coffee Break
 
-- 14:00 - 16:30: Workshop 4: Data wrangling
+- 14:30 - 16:30: Workshop 4: Data Wrangling
 
 ::: notes
 Lunch is provided 
@@ -59,23 +59,25 @@ Lunch is provided
  
 ## Schedule - Day 2
 
-- 09:30 - 11:20: Workshop 5: Data visualisation
+- 09:00 - 10:30: Workshop 5: Data visualisation
 
-- 11:20 - 11:40: Coffee break
+- 10:30 - 10:45: Coffee break
 
-- 11:40 - 12:20: Workshop 6: Statistics in R primer
+- 10:45 - 12:00: Workshop 6: Control flow and looping (part 1)
 
-- 12:20 - 13:30: Workshop 7: Control flow and looping
+- 12:00 - 13:00: Lunch break
 
-- 13:30 - 14:15: Lunch
+- 13:00 - 13:45: Workshop 6: Control flow and looping (part 2)
 
-- 14:15 - 16:00: Workshop 8: Using your own data
+- 13:45 - 14:00: Coffee break
+
+- 14:00 - 16:00: Workshop 7: Using your own data
+
 
 ## The data
 
-- We use the Critical Care Health Informatics Collaborative dataset.
-
-- Multicentre adult intensive therapy unit database
+- We use the Critical Care Health Informatics Collaborative dataset
+    - Multicentre adult intensive therapy unit database
     - 11 adult intensive care units
     - 5 UK teaching hospitals
     - Privacy ensured through “highest standards of data security”
@@ -86,11 +88,11 @@ Lunch is provided
 
 ## Workshop layout
 
-- 8 workshops.
-- These include presentations and chances for you to follow along on your laptops.
-- You work your way through a worksheet during Workshop 2. 
-- You try to answer a question of your own using data during Workshop 8. 
-- A pdf file is available on the GitHub: https://github.com/datascibc/ClinicianCoders/blob/master/Handout.pdf. It contains all of the content from the course workshops for future reference. 
+- 7 workshops
+    - These include presentations and chances for you to follow along on your laptops.
+    - Workshop 2: You work your way through a worksheet during . 
+    - Workshop 7: You try to answer a question of your own using data. We will ask you to submit this question by the end of Day 2.
+- A pdf file is available on the GitHub:   https://github.com/ClinicianCoders/ClinicianCoders/blob/master/Handout.pdf. It contains all of the content from the course workshops for future reference.  
 
 ## Final note - tips on writing code
 
