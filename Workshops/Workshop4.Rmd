@@ -82,7 +82,7 @@ If not, please load it again.
 - Whenever you see it, think of the word 'then'. 
 ```{r, eval = F}
 data_frame_name %>% 
-  dplyr::select(column_name) %>% 
+  dplyr::pull(column_name) %>% 
   mean()
 ```
 - Shortcut - `Cmd + Shift + M` (Mac) `Ctrl + Shift + M` (Windows)
